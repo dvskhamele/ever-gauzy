@@ -140,7 +140,7 @@ export class EmailSendService {
 
 		const config: Email.EmailConfig<any> = {
 			message: {
-				from: smtpConfig.fromAddress || 'noreply@gauzy.co'
+				from: smtpConfig.fromAddress || 'noreply@signimus.com'
 			},
 			// if you want to send emails in development or test environments, set options.send to true.
 			send: true,

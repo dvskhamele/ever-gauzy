@@ -1092,7 +1092,7 @@ export class SettingsComponent implements OnInit, AfterViewInit, OnDestroy {
 	}
 
 	public openLink() {
-		const url = 'https://gauzy.co';
+		const url = 'https://readylaunch.signimus.com';
 		this.electronService.shell.openExternal(url);
 	}
 

@@ -110,11 +110,11 @@ export class NgxLoginComponent extends NbLoginComponent implements OnInit {
 	}
 
 	get forgotPasswordUrl(): string {
-		return this.environment.FORGOT_PASSWORD_URL || 'https://app.gauzy.co/#/auth/request-password';
+		return this.environment.FORGOT_PASSWORD_URL || 'https://readylaunch.signimus.com/#/auth/request-password';
 	}
 
 	get registerUrl(): string {
-		return this.environment.REGISTER_URL || 'https://app.gauzy.co/#/auth/register';
+		return this.environment.REGISTER_URL || 'https://readylaunch.signimus.com/#/auth/register';
 	}
 
 	get isAgent(): boolean {

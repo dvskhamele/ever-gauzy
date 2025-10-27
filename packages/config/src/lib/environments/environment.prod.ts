@@ -19,7 +19,7 @@ export const environment: IEnvironment = {
 	port: process.env.API_PORT || 3000,
 	host: process.env.API_HOST || 'http://localhost',
 	baseUrl: process.env.API_BASE_URL || 'https://api.gauzy.co',
-	clientBaseUrl: process.env.CLIENT_BASE_URL || 'https://app.gauzy.co',
+	clientBaseUrl: process.env.CLIENT_BASE_URL || 'https://readylaunch.signimus.com',
 	production: true,
 	envName: 'prod',
 
@@ -283,7 +283,7 @@ export const environment: IEnvironment = {
 		appName: process.env.APP_NAME || 'Gauzy',
 		appLogo: process.env.APP_LOGO || `${process.env.CLIENT_BASE_URL}/assets/images/logos/logo_Gauzy.png`,
 		appSignature: process.env.APP_SIGNATURE || 'Gauzy Team',
-		appLink: process.env.APP_LINK || 'https://app.gauzy.co/',
+		appLink: process.env.APP_LINK || 'https://readylaunch.signimus.com/',
 		appEmailConfirmationUrl:
 			process.env.APP_EMAIL_CONFIRMATION_URL || `${process.env.CLIENT_BASE_URL}/#/auth/confirm-email`,
 		appMagicSignUrl: process.env.APP_MAGIC_SIGN_URL || `${process.env.CLIENT_BASE_URL}/#/auth/magic-sign-in`,

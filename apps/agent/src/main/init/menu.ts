@@ -52,7 +52,7 @@ export class AgentMenu {
 				{
 					label: TranslateService.instant('TIMER_TRACKER.MENU.LEARN_MORE'),
 					click() {
-						shell.openExternal(process.env.COMPANY_SITE_LINK || 'https://gauzy.co/');
+						shell.openExternal(process.env.COMPANY_SITE_LINK || 'https://readylaunch.signimus.com/');
 					}
 				},
 				{

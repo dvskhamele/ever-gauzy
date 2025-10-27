@@ -1,6 +1,6 @@
 # Ever Gauzy Platform
 
-[uri_gauzy]: https://gauzy.co
+[uri_gauzy]: https://readylaunch.signimus.com
 [uri_license]: https://www.gnu.org/licenses/agpl-3.0.html
 [uri_license_image]: https://img.shields.io/badge/License-AGPL%20v3-blue.svg
 
@@ -101,10 +101,10 @@ Read more [about Gauzy](https://github.com/ever-co/ever-gauzy/wiki/About-Gauzy) 
 
 ## 🔗 Links
 
--   **<https://gauzy.co>** - check more information about the platform at the official website.
--   **<https://app.gauzy.co>** - SaaS (Important: it's currently in Alpha version/testing mode, please use it cautiously).
+-   **<https://readylaunch.signimus.com>** - check more information about the platform at the official website.
+-   **<https://readylaunch.signimus.com>** - SaaS (Important: it's currently in Alpha version/testing mode, please use it cautiously).
 -   **<https://demo.gauzy.co>** - Online Demo (see more info below).
--   **<https://gauzy.co/downloads>** - Download Platform & Apps (see also more info below about available downloads).
+-   **<https://readylaunch.signimus.com/downloads>** - Download Platform & Apps (see also more info below about available downloads).
 -   **<https://docs.gauzy.co>** - Platform Documentation (WIP). See also our [Wiki](https://github.com/ever-co/ever-gauzy/wiki).
 -   **<https://ever.co>** - get more information about our company products.
 
@@ -128,7 +128,7 @@ Notes:
 
 ### Downloads
 
-You can download Gauzy Platform, Gauzy Server, or Desktop Apps (Windows/Mac/Linux) from the official [Downloads](https://web.gauzy.co/downloads) page.
+You can download Gauzy Platform, Gauzy Server, or Desktop Apps (Windows/Mac/Linux) from the official [Downloads](https://readylaunch.signimus.com/downloads) page.
 
 In addition, all downloads are also available from the following pages:
 
@@ -139,7 +139,7 @@ In addition, all downloads are also available from the following pages:
 
 ### Production (SaaS)
 
-Ever® Gauzy™ Platform SaaS is available at <https://app.gauzy.co>.
+Ever® Gauzy™ Platform SaaS is available at <https://readylaunch.signimus.com>.
 
 Note: it's currently in Alpha version/testing mode, please use it cautiously!
 
@@ -161,7 +161,7 @@ We have Gauzy Server and two Desktop Apps (for Windows/Mac/Linux):
 
 More information about our Server & Desktop Apps:
 
--   Download for your OS from the official [Downloads](https://web.gauzy.co/downloads) page or see the section "Download" above for other links to our releases pages.
+-   Download for your OS from the official [Downloads](https://readylaunch.signimus.com/downloads) page or see the section "Download" above for other links to our releases pages.
 -   Setup Gauzy Server with default choices in Setup Wizard and run it.
 -   You can also setup Gauzy Desktop App (can run independently or connect to Gauzy Server) or Gauzy Desktop Timer App (should be connected to Gauzy Server)
 -   You can login with `admin@ever.co` and password `admin` to check Admin functionality if you installed Gauzy Server or Gauzy Desktop App. Note: such an Admin user is not an employee, so you will not be able to track time.

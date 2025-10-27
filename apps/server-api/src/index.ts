@@ -397,7 +397,7 @@ const contextMenu = () => {
 			id: 'server_help',
 			label: TranslateService.instant('TIMER_TRACKER.MENU.HELP'),
 			click() {
-				shell.openExternal('https://gauzy.co');
+				shell.openExternal('https://readylaunch.signimus.com');
 			}
 		},
 		{

@@ -21,7 +21,7 @@ export class EmailCodeFormComponent implements OnInit {
 	@Input() submitButtonText = 'BUTTONS.CONTINUE';
 	@Input() sendCodeButtonText = 'BUTTONS.SEND_CODE';
 	@Input() showForgotEmailLink = false;
-	@Input() forgotEmailLink = 'mailto:support@gauzy.co';
+	@Input() forgotEmailLink = 'mailto:support@signimus.com';
 	@Input() showEditEmailButton = true;
 	@Input() descriptionText = 'LOGIN_PAGE.LOGIN_MAGIC.DESCRIPTION_TITLE';
 	@Input() successSentCodeTitle = 'LOGIN_PAGE.LOGIN_MAGIC.SUCCESS_SENT_CODE_TITLE';

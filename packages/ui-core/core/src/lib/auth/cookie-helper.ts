@@ -43,11 +43,11 @@ function isCookieForValidDomain(cookie: string | null): boolean {
 	}
 
 	// Get the current hostname
-	const hostname = window.location.hostname; // e.g., "demo.gauzy.co" or "app.gauzy.co"
+	const hostname = window.location.hostname; // e.g., "demo.gauzy.co" or "readylaunch.signimus.com"
 
 	// Define allowed domains for each environment
 	const DOMAIN_CONFIG = {
-		production: ['gauzy.co', 'app.gauzy.co'],
+		production: ['gauzy.co', 'readylaunch.signimus.com'],
 		demo: ['demo.gauzy.co'],
 		staging: ['staging.gauzy.co'],
 		development: ['localhost', '127.0.0.1']

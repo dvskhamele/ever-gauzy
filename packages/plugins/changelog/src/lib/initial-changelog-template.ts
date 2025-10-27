@@ -26,7 +26,7 @@ export const INITIAL_CHANGELOG_TEMPLATE: IChangelog[] = [
 		date: new Date(),
 		isFeature: false,
 		content: 'You are welcome to check more information about the platform at our official website.',
-		learnMoreUrl: 'https://gauzy.co/',
+		learnMoreUrl: 'https://readylaunch.signimus.com/',
 		imageUrl: ''
 	},
 	{
