@@ -133,3 +133,26 @@ nb-accordion-item:first-child.collapsed nb-accordion-item-header.principal {
 		max-height: 22px;
 	}
 }
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: nb-theme(text-basic-color);
+  margin-right: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover {
+    color: nb-theme(color-primary-500);
+  }
+}
+
+.logo-text.white-svg {
+  color: white;
+  
+  &:hover {
+    color: nb-theme(color-primary-500);
+  }
+}
