@@ -1,0 +1,28 @@
+<nb-accordion *ngIf="isAccordion" class="accordion workspace">
+	<nb-accordion-item [collapsed]="controlled" (collapsedChange)="onCollapse($event)">
+		<nb-accordion-item-header class="principal" (click)="toggleWorkspace()">
+			<div class="logo-text">signimus</div>
+			<div class="organization" *ngIf="!isCollapse">
+				<img [src]="organization?.imageUrl" [alt]="organization?.name" />
+				<div class="description text">
+					<div [nbTooltip]="organization?.name">
+						{{ organization?.name }}
+					</div>
+					<div [nbTooltip]="organization?.website">
+						{{ organization?.website }}
+					</div>
+				</div>
+			</div>
+		</nb-accordion-item-header>
+	</nb-accordion-item>
+</nb-accordion>
+
+<div *ngIf="!isAccordion">
+	<ng-container *ngTemplateOutlet="logoTemplate"></ng-container>
+</div>
+
+<ng-template #logoTemplate>
+	<div *ngIf="isCollapse" class="logo-text" [ngClass]="{ 'white-svg': isWhiteSvg() }" (click)="navigateHome()">
+		signimus
+	</div>
+</ng-template>
