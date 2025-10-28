@@ -475,7 +475,7 @@
 		"locutus": "^2.0.30",
 		"minizlib": "^2.1.2",
 		"sharp": "^0.33.0",
-		"typescript": "~5.8.3"
+		"typescript": "~5.7.3"
 	},
 	"dependencies": {
 		"@angular/animations": "^19.2.10",
@@ -490,6 +490,7 @@
 		"@angular/platform-browser-dynamic": "^19.2.10",
 		"@angular/router": "^19.2.10",
 		"@angular/service-worker": "^19.2.10",
+		"@as-integrations/express5": "1.1.2",
 		"@fortawesome/angular-fontawesome": "^1.0.0",
 		"@fullcalendar/angular": "^6.1.17",
 		"@nebular/auth": "^15.0.0",
@@ -641,7 +642,7 @@
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-language-service": "^0.9.9",
 		"typedoc": "^0.23.24",
-		"typescript": "~5.8.3",
+		"typescript": "~5.7.3",
 		"verdaccio": "^6.0.5",
 		"webpack": "^5.99.7",
 		"webpack-bundle-analyzer": "^4.10.2",
