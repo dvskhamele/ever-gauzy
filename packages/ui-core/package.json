@@ -3,19 +3,19 @@
 	"version": "0.1.0",
 	"description": "A collection of core UI components and utilities for the Gauzy framework. This library provides essential building blocks for constructing user interfaces, designed to be flexible and reusable in various Angular applications.",
 	"author": {
-		"name": "Ever Co. LTD",
-		"email": "ever@ever.co",
-		"url": "https://ever.co"
+		"name": "Signimus",
+		"email": "info@signimus.com",
+		"url": "https://signimus.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ever-co/ever-gauzy",
+		"url": "https://github.com/signimus/ever-gauzy",
 		"directory": "packages/ui-core"
 	},
 	"bugs": {
-		"url": "https://github.com/ever-co/ever-gauzy/issues"
+		"url": "https://github.com/signimus/ever-gauzy/issues"
 	},
-	"homepage": "https://ever.co",
+	"homepage": "https://signimus.com",
 	"license": "AGPL-3.0",
 	"private": true,
 	"scripts": {

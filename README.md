@@ -7,12 +7,12 @@
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ever-co.gauzy-platform)
 [![License: AGPL v3][uri_license_image]][uri_license]
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ever-co/ever-gauzy)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ever-co/ever-gauzy)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/signimus/ever-gauzy)
 
 ## 💡 What's New
 
-We released [Ever Teams](https://github.com/ever-co/ever-teams) platform for Work & Project Management.
-Please check <https://github.com/ever-co/ever-teams> and make it ⭐ on GitHub!
+We released [Ever Teams](https://github.com/signimus/ever-teams) platform for Work & Project Management.
+Please check <https://github.com/signimus/ever-teams> and make it ⭐ on GitHub!
 It's built with a React (NextJs) / ReactNative (Expo) stack and connects to headless [Ever Gauzy Platform APIs](https://api.gauzy.co/docs).
 
 ## 🌟 What is it
@@ -28,7 +28,7 @@ It's built with a React (NextJs) / ReactNative (Expo) stack and connects to head
 
 ![overview](https://docs.gauzy.co/overview.png)
 
-Ever® Gauzy™ Platform is a part of our larger Open Platform for **Collaborative, On-Demand and Sharing Economies** - [Ever® Platform™](https://ever.co).
+Ever® Gauzy™ Platform is a part of our larger Open Platform for **Collaborative, On-Demand and Sharing Economies** - [Signimus™ Platform™](https://signimus.com).
 
 ## ✨ Features
 
@@ -78,7 +78,7 @@ A more detailed list of the features available in the platform:
 -   Multi-lingual
 -   Dark / Light / Corporate / Material and other Themes
 
-Read more [about Gauzy](https://github.com/ever-co/ever-gauzy/wiki/About-Gauzy) and [how to use it](https://github.com/ever-co/ever-gauzy/wiki/How-to-use-Gauzy) at your company, on-demand business, freelance business, agency, studio or in-house teams.
+Read more [about Gauzy](https://github.com/signimus/ever-gauzy/wiki/About-Gauzy) and [how to use it](https://github.com/signimus/ever-gauzy/wiki/How-to-use-Gauzy) at your company, on-demand business, freelance business, agency, studio or in-house teams.
 
 ## 🌼 Screenshots
 
@@ -105,8 +105,8 @@ Read more [about Gauzy](https://github.com/ever-co/ever-gauzy/wiki/About-Gauzy) 
 -   **<https://readylaunch.signimus.com>** - SaaS (Important: it's currently in Alpha version/testing mode, please use it cautiously).
 -   **<https://demo.gauzy.co>** - Online Demo (see more info below).
 -   **<https://readylaunch.signimus.com/downloads>** - Download Platform & Apps (see also more info below about available downloads).
--   **<https://docs.gauzy.co>** - Platform Documentation (WIP). See also our [Wiki](https://github.com/ever-co/ever-gauzy/wiki).
--   **<https://ever.co>** - get more information about our company products.
+-   **<https://docs.gauzy.co>** - Platform Documentation (WIP). See also our [Wiki](https://github.com/signimus/ever-gauzy/wiki).
+-   **<https://signimus.com>** - get more information about our company products.
 
 ## 📊 Activity
 
@@ -132,10 +132,10 @@ You can download Gauzy Platform, Gauzy Server, or Desktop Apps (Windows/Mac/Linu
 
 In addition, all downloads are also available from the following pages:
 
--   [Platform Releases](https://github.com/ever-co/ever-gauzy/releases)
--   [Server Releases](https://github.com/ever-co/ever-gauzy-server/releases)
--   [Desktop App Releases](https://github.com/ever-co/ever-gauzy-desktop/releases)
--   [Desktop Timer App Releases](https://github.com/ever-co/ever-gauzy-desktop-timer/releases)
+-   [Platform Releases](https://github.com/signimus/ever-gauzy/releases)
+-   [Server Releases](https://github.com/signimus/ever-gauzy-server/releases)
+-   [Desktop App Releases](https://github.com/signimus/ever-gauzy-desktop/releases)
+-   [Desktop Timer App Releases](https://github.com/signimus/ever-gauzy-desktop-timer/releases)
 
 ### Production (SaaS)
 
@@ -167,7 +167,7 @@ More information about our Server & Desktop Apps:
 -   You can login with `admin@ever.co` and password `admin` to check Admin functionality if you installed Gauzy Server or Gauzy Desktop App. Note: such an Admin user is not an employee, so you will not be able to track time.
 -   You can login with `employee@ever.co` and password `123456` to check Employee-related functionality in Gauzy UI or to run Desktop Timer from an "Employee" perspective (such a user is an Employee and can track time).
 -   If you install Gauzy Server, it is possible to connect to it using a browser (by default on <http://localhost:4200>) or using Gauzy Desktop Apps (make sure to configure Desktop apps to connect to Gauzy API on <http://127.0.0.1:3000/api> because it's where Gauzy Server API runs by default).
--   You can read more information about our Desktop Apps on the [Desktop Apps Wiki Page](https://github.com/ever-co/ever-gauzy/wiki/Gauzy-Desktop-Apps) and our Server at the [Server Wiki Page](https://github.com/ever-co/ever-gauzy/wiki/Gauzy-Server).
+-   You can read more information about our Desktop Apps on the [Desktop Apps Wiki Page](https://github.com/signimus/ever-gauzy/wiki/Gauzy-Desktop-Apps) and our Server at the [Server Wiki Page](https://github.com/signimus/ever-gauzy/wiki/Gauzy-Server).
 
 ## 🧱 Technology Stack and Requirements
 
@@ -188,7 +188,7 @@ Note: thanks to TypeORM / MikroORM, Gauzy will support lots of DBs: SQLite (defa
 
 ## 📄 Documentation
 
-Please refer to our official [Platform Documentation](https://docs.gauzy.co) and our [Wiki](https://github.com/ever-co/ever-gauzy/wiki) (WIP).
+Please refer to our official [Platform Documentation](https://docs.gauzy.co) and our [Wiki](https://github.com/signimus/ever-gauzy/wiki) (WIP).
 
 ## 🚀 Quick Start
 
@@ -245,8 +245,8 @@ Together with Gauzy, the Docker Compose commands described above for Production 
 -   Install [Yarn](https://github.com/yarnpkg/yarn) (if you don't have it) with `npm i -g yarn`.
 -   Install NPM packages and Bootstrap solution using the command `yarn bootstrap`.
 -   If you will need to make code changes (and push to Git repo), please run `yarn prepare:husky`.
--   Adjust settings in the [`.env.local`](https://github.com/ever-co/ever-gauzy/blob/develop/.env.local) which is used in local runs.
--   Alternatively, you can copy [`.env.sample`](https://github.com/ever-co/ever-gauzy/blob/develop/.env.sample) to `.env` and change default settings there, e.g. database type, name, user, password, etc.
+-   Adjust settings in the [`.env.local`](https://github.com/signimus/ever-gauzy/blob/develop/.env.local) which is used in local runs.
+-   Alternatively, you can copy [`.env.sample`](https://github.com/signimus/ever-gauzy/blob/develop/.env.sample) to `.env` and change default settings there, e.g. database type, name, user, password, etc.
 -   Run both API and UI with a single command: `yarn start`.
 -   Open Gauzy UI on <http://localhost:4200> in your browser (API runs on <http://localhost:3000/api>).
 -   Login with email `admin@ever.co` and password: `admin` for Super Admin user.
@@ -272,36 +272,35 @@ Notes:
 
 #### General information
 
--   See [Setup Gauzy for Client Server](https://github.com/ever-co/ever-gauzy/wiki/Setup-Gauzy-for-Client-Server) for more information about production setup on your servers.
+-   See [Setup Gauzy for Client Server](https://github.com/signimus/ever-gauzy/wiki/Setup-Gauzy-for-Client-Server) for more information about production setup on your servers.
 
 #### Kubernetes
 
--   We recommend deploying to Kubernetes (k8s), either manually (see below) or with our [Terraform Modules](https://github.com/ever-co/ever-gauzy-terraform) or [Ever Helm Charts](https://github.com/ever-co/ever-charts).
--   For more simple deployment scenarios with k8s, please see [Kubernetes configurations](https://github.com/ever-co/ever-gauzy/tree/develop/.deploy/k8s), which we are using to deploy Gauzy into [DigitalOcean k8s cluster](https://www.digitalocean.com/products/kubernetes).
+-   We recommend deploying to Kubernetes (k8s), either manually (see below) or with our [Terraform Modules](https://github.com/signimus/ever-gauzy-terraform) or [Ever Helm Charts](https://github.com/signimus/ever-charts).
+-   For more simple deployment scenarios with k8s, please see [Kubernetes configurations](https://github.com/signimus/ever-gauzy/tree/develop/.deploy/k8s), which we are using to deploy Gauzy into [DigitalOcean k8s cluster](https://www.digitalocean.com/products/kubernetes).
 
 #### DigitalOcean App Platform
 
--   For the most simple deployment scenarios (e.g. for yourself or your small organization), check our [DigitalOcean App Platform configurations](https://github.com/ever-co/ever-gauzy/tree/develop/.do) and corresponding [GitHub Action](https://github.com/ever-co/ever-gauzy/blob/develop/.github/workflows/deploy-do-app-platform-stage.yml).
+-   For the most simple deployment scenarios (e.g. for yourself or your small organization), check our [DigitalOcean App Platform configurations](https://github.com/signimus/ever-gauzy/tree/develop/.do) and corresponding [GitHub Action](https://github.com/signimus/ever-gauzy/blob/develop/.github/workflows/deploy-do-app-platform-stage.yml).
 
 #### Virtual Instances / Droplets (via SSH)
 
--   Another variant to deploy Gauzy is to use DigitalOcean Droplets or any other virtual instance (with Ubuntu OS) and deploy using SCP/SSH, for example, following [GitHub Action](https://github.com/ever-co/ever-gauzy/blob/develop/.github/workflows/deploy-do-droplet-demo.yml)
+-   Another variant to deploy Gauzy is to use DigitalOcean Droplets or any other virtual instance (with Ubuntu OS) and deploy using SCP/SSH, for example, following [GitHub Action](https://github.com/signimus/ever-gauzy/blob/develop/.github/workflows/deploy-do-droplet-demo.yml)
 
 #### Pulumi
 
--   In addition, check [Gauzy Pulumi](https://github.com/ever-co/ever-gauzy-pulumi) project (WIP), it makes complex Clouds deployments possible with a single command (`pulumi up`). Note: it currently supports AWS EKS (Kubernetes) for development and production with Application Load Balancers and AWS RDS Serverless PostgreSQL DB deployments. We also implemented deployments to ECS EC2 and Fargate Clusters in the same Pulumi project.
+-   In addition, check [Gauzy Pulumi](https://github.com/signimus/ever-gauzy-pulumi) project (WIP), it makes complex Clouds deployments possible with a single command (`pulumi up`). Note: it currently supports AWS EKS (Kubernetes) for development and production with Application Load Balancers and AWS RDS Serverless PostgreSQL DB deployments. We also implemented deployments to ECS EC2 and Fargate Clusters in the same Pulumi project.
 
 ## 💌 Contact Us
 
--   [Ever.co Website Contact Us page](https://ever.co/contacts)
+-   [Signimus.com Website Contact Us page](https://signimus.com/contacts)
 -   [Slack Community](https://join.slack.com/t/gauzy/shared_invite/enQtNzc5MTA5MDUwODg2LTI0MGEwYTlmNWFlNzQzMzBlOWExNTk0NzAyY2IwYWYwMzZjMTliYjMwNDI3NTJmYmM4MDQ4NDliMDNiNDY1NWU)
 -   [Discord Chat](https://discord.gg/hKQfn4j)
--   [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/ever-co/ever-gauzy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
--   [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/evereq?utm_source=github&utm_medium=button&utm_term=evereq&utm_campaign=github)
--   For business inquiries: <mailto:gauzy@ever.co>
--   Please report security vulnerabilities to <mailto:security@ever.co>
--   [Gauzy Platform @ Twitter](https://twitter.com/gauzyplatform)
--   [Gauzy Platform @ Facebook](https://www.facebook.com/gauzyplatform)
+-   [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/signimus/ever-gauzy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+-   [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/signimus?utm_source=github&utm_medium=button&utm_term=signimus&utm_campaign=github)
+-   For business inquiries: <mailto:gauzy@signimus.com>
+-   Please report security vulnerabilities to <mailto:security@signimus.com>
+-   [Gauzy Platform @ Facebook](https://www.facebook.com/signimus)
 
 ## 🔐 Security
 
@@ -311,17 +310,17 @@ See more details in the [LICENSE](LICENSE.md).
 
 In a production setup, all client-side to server-side (backend, APIs) communications should be encrypted using HTTPS/WSS/SSL (REST APIs, GraphQL endpoint, Socket.io WebSockets, etc.).
 
-If you discover any issue regarding security, please disclose the information responsibly by sending an email to <mailto:security@ever.co> or on [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev) and not by creating a GitHub issue.
+If you discover any issue regarding security, please disclose the information responsibly by sending an email to <mailto:security@signimus.com> or on [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev) and not by creating a GitHub issue.
 
 ## 🛡️ License
 
-We support the open-source community. If you're building awesome non-profit/open-source projects, we're happy to help and will provide (subject to [acceptance criteria](https://github.com/ever-co/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects)) Ever Gauzy Enterprise edition license and free hosting option! Feel free to contact us at <mailto:ever@ever.co> to make a request. More details are explained in our [Wiki](https://github.com/ever-co/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects).
+We support the open-source community. If you're building awesome non-profit/open-source projects, we're happy to help and will provide (subject to [acceptance criteria](https://github.com/signimus/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects)) Ever Gauzy Enterprise edition license and free hosting option! Feel free to contact us at <mailto:ever@signimus.com> to make a request. More details are explained in our [Wiki](https://github.com/signimus/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects).
 
 This software is available under the following licenses:
 
--   [Ever® Gauzy™ Platform Community Edition](https://github.com/ever-co/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-community-edition-license)
--   [Ever® Gauzy™ Platform Small Business](https://github.com/ever-co/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-small-business-license)
--   [Ever® Gauzy™ Platform Enterprise](https://github.com/ever-co/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-enterprise-license)
+-   [Ever® Gauzy™ Platform Community Edition](https://github.com/signimus/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-community-edition-license)
+-   [Ever® Gauzy™ Platform Small Business](https://github.com/signimus/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-small-business-license)
+-   [Ever® Gauzy™ Platform Enterprise](https://github.com/signimus/ever-gauzy/blob/master/LICENSE.md#gauzy-platform-enterprise-license)
 
 #### The default Ever® Gauzy™ Platform license, without a valid Ever® Gauzy™ Platform Enterprise or Ever® Gauzy™ Platform Small Business License agreement, is the Ever® Gauzy™ Platform Community Edition License
 
@@ -341,13 +340,13 @@ All other brand and product names are trademarks, registered trademarks, or serv
 ## 🍺 Contribute
 
 -   Please give us :star: on Github, it **helps**!
--   You are more than welcome to submit feature requests in the [separate repo](https://github.com/ever-co/feature-requests/issues)
+-   You are more than welcome to submit feature requests in the [separate repo](https://github.com/signimus/feature-requests/issues)
 -   Pull requests are always welcome! Please base pull requests against the _develop_ branch and follow the [contributing guide](.github/CONTRIBUTING.md).
 
 ## 💪 Thanks to our Contributors
 
-See our contributors list in [CONTRIBUTORS.md](https://github.com/ever-co/ever-gauzy/blob/develop/.github/CONTRIBUTORS.md).
-You can also view a full list of our [contributors tracked by Github](https://github.com/ever-co/ever-gauzy/graphs/contributors).
+See our contributors list in [CONTRIBUTORS.md](https://github.com/signimus/ever-gauzy/blob/develop/.github/CONTRIBUTORS.md).
+You can also view a full list of our [contributors tracked by Github](https://github.com/signimus/ever-gauzy/graphs/contributors).
 
 <img src="https://contributors-img.web.app/image?repo=ever-co/ever-gauzy" />
 
@@ -358,25 +357,25 @@ You can also view a full list of our [contributors tracked by Github](https://gi
 ## ❤️ Powered By
 
 <p>
-  <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=ever-co">
+  <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=signimus">
     <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PoweredByDO/DO_Powered_by_Badge_blue.svg" width="201px">
   </a>
 </p>
 
 ## ©️ Copyright
 
-#### Copyright © 2019-present, Ever Co. LTD. All rights reserved
+#### Copyright © 2019-present, Signimus. All rights reserved
 
-[![Circle CI](https://circleci.com/gh/ever-co/ever-gauzy.svg?style=svg)](https://circleci.com/gh/ever-co/ever-gauzy)
-[![codecov](https://codecov.io/gh/ever-co/ever-gauzy/branch/master/graph/badge.svg)](https://codecov.io/gh/ever-co/ever-gauzy)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8c46f9eb9df64aa9859dea4d572059ac)](https://www.codacy.com/gh/ever-co/ever-gauzy/dashboard?utm_source=github.com&utm_medium=referral&utm_content=ever-co/ever-gauzy&utm_campaign=Badge_Grade)
+[![Circle CI](https://circleci.com/gh/signimus/ever-gauzy.svg?style=svg)](https://circleci.com/gh/signimus/ever-gauzy)
+[![codecov](https://codecov.io/gh/signimus/ever-gauzy/branch/master/graph/badge.svg)](https://codecov.io/gh/signimus/ever-gauzy)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8c46f9eb9df64aa9859dea4d572059ac)](https://www.codacy.com/gh/signimus/ever-gauzy/dashboard?utm_source=github.com&utm_medium=referral&utm_content=signimus/ever-gauzy&utm_campaign=Badge_Grade)
 [![DeepScan grade](https://deepscan.io/api/teams/3293/projects/16703/branches/363423/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3293&pid=16703&bid=363423)
-[![Known Vulnerabilities](https://snyk.io/test/github/ever-co/ever-gauzy/badge.svg)](https://snyk.io/test/github/ever-co/ever-gauzy)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fever-co%2Fever-gauzy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fever-co%2Fgauzy?ref=badge_shield)
-[![Crowdin](https://badges.crowdin.net/e/1d2b3405d65a56ec116d0984fd579cc9/localized.svg)](https://ever.crowdin.com/gauzy)
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/ever-co/ever-gauzy?utm_source=oss&utm_medium=github&utm_campaign=ever-co%2Fever-gauzy&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+[![Known Vulnerabilities](https://snyk.io/test/github/signimus/ever-gauzy/badge.svg)](https://snyk.io/test/github/signimus/ever-gauzy)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsignimus%2Fever-gauzy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsignimus%2Fgauzy?ref=badge_shield)
+[![Crowdin](https://badges.crowdin.net/e/1d2b3405d65a56ec116d0984fd579cc9/localized.svg)](https://signimus.crowdin.com/gauzy)
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/signimus/ever-gauzy?utm_source=oss&utm_medium=github&utm_campaign=signimus%2Fever-gauzy&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 ## 🔥 P.S
 
--   If you are interested in running an on-demand (delivery) or digital marketplace business, check open-source [Ever Demand Platform](https://github.com/ever-co/ever-demand)
--   [We are Hiring: remote TypeScript / NestJS / Angular developers](https://github.com/ever-co/jobs#available-positions)
+-   If you are interested in running an on-demand (delivery) or digital marketplace business, check open-source [Signimus Demand Platform](https://github.com/signimus/ever-demand)
+-   [We are Hiring: remote TypeScript / NestJS / Angular developers](https://github.com/signimus/jobs#available-positions)

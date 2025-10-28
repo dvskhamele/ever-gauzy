@@ -50,7 +50,7 @@ export class SetupComponent implements OnInit, OnDestroy {
 		private readonly _notifier: ToastrNotificationService
 	) {
 		electronService.ipcRenderer.on('setup-data', (_, arg) => {
-			this.desktopFeatures.gauzyPlatform = arg.gauzyWindow;
+			this.desktopFeatures.signimusPlatform = arg.gauzyWindow;
 			this.desktopFeatures.timeTracking = arg.timeTrackerWindow;
 			this.connectivity.integrated = arg.isLocalServer;
 			this.connectivity.custom = !arg.isLocalServer && arg.serverUrl !== 'https://api.gauzy.co';
@@ -117,7 +117,7 @@ export class SetupComponent implements OnInit, OnDestroy {
 			? './assets/images/logos/logo_Gauzy.svg'
 			: '../assets/images/logos/logo_Gauzy.svg';
 	desktopFeatures: any = {
-		gauzyPlatform: !this.isDesktopTimer,
+		signimusPlatform: !this.isDesktopTimer,
 		timeTracking: !this.isServer
 	};
 
@@ -333,7 +333,7 @@ export class SetupComponent implements OnInit, OnDestroy {
 
 	getFeature() {
 		return {
-			gauzyWindow: this.desktopFeatures.gauzyPlatform,
+			gauzyWindow: this.desktopFeatures.signimusPlatform,
 			timeTrackerWindow: this.desktopFeatures.timeTracking
 		};
 	}
