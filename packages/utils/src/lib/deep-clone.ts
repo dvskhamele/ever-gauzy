@@ -8,9 +8,9 @@ import { isPlainObject } from './is-plain-object';
  * @param input - The value to be deeply cloned. Can be a primitive, array, or object.
  * @returns A deep copy of the input value.
  */
-export function deepClone<T extends string | number | any[] | Object>(input: T): T {
+export function deepClone<T>(input: T): T {
 	// Return the input itself if it's not an object or is empty
-	if (!isPlainObject(input) || isEmpty(input)) {
+	if (!input || typeof input !== 'object') {
 		return input;
 	}
 

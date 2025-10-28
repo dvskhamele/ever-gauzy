@@ -18,28 +18,28 @@ const featureEnabled = (feature: Extract<keyof IAuthenticationFlagFeatures, stri
  */
 export const flagFeatures: IAuthenticationFlagFeatures = {
 	/** Flag indicating whether email/password login is enabled. */
-	FEATURE_EMAIL_PASSWORD_LOGIN: featureEnabled(FeatureEnum.FEATURE_EMAIL_PASSWORD_LOGIN),
+	FEATURE_EMAIL_PASSWORD_LOGIN: featureEnabled(FeatureEnum.FEATURE_EMAIL_PASSWORD_LOGIN as any),
 
 	/** Flag indicating whether magic login is enabled. */
-	FEATURE_MAGIC_LOGIN: featureEnabled(FeatureEnum.FEATURE_MAGIC_LOGIN),
+	FEATURE_MAGIC_LOGIN: featureEnabled(FeatureEnum.FEATURE_MAGIC_LOGIN as any),
 
 	/** Flag indicating whether GitHub login is enabled. */
-	FEATURE_GITHUB_LOGIN: featureEnabled(FeatureEnum.FEATURE_GITHUB_LOGIN),
+	FEATURE_GITHUB_LOGIN: featureEnabled(FeatureEnum.FEATURE_GITHUB_LOGIN as any),
 
 	/** Flag indicating whether Facebook login is enabled. */
-	FEATURE_FACEBOOK_LOGIN: featureEnabled(FeatureEnum.FEATURE_FACEBOOK_LOGIN),
+	FEATURE_FACEBOOK_LOGIN: featureEnabled(FeatureEnum.FEATURE_FACEBOOK_LOGIN as any),
 
 	/** Flag indicating whether Google login is enabled. */
-	FEATURE_GOOGLE_LOGIN: featureEnabled(FeatureEnum.FEATURE_GOOGLE_LOGIN),
+	FEATURE_GOOGLE_LOGIN: featureEnabled(FeatureEnum.FEATURE_GOOGLE_LOGIN as any),
 
 	/** Flag indicating whether Twitter login is enabled. */
-	FEATURE_TWITTER_LOGIN: featureEnabled(FeatureEnum.FEATURE_TWITTER_LOGIN),
+	FEATURE_TWITTER_LOGIN: featureEnabled(FeatureEnum.FEATURE_TWITTER_LOGIN as any),
 
 	/** Flag indicating whether Microsoft login is enabled. */
-	FEATURE_MICROSOFT_LOGIN: featureEnabled(FeatureEnum.FEATURE_MICROSOFT_LOGIN),
+	FEATURE_MICROSOFT_LOGIN: featureEnabled(FeatureEnum.FEATURE_MICROSOFT_LOGIN as any),
 
 	/** Flag indicating whether LinkedIn login is enabled. */
-	FEATURE_LINKEDIN_LOGIN: featureEnabled(FeatureEnum.FEATURE_LINKEDIN_LOGIN)
+	FEATURE_LINKEDIN_LOGIN: featureEnabled(FeatureEnum.FEATURE_LINKEDIN_LOGIN as any)
 };
 
 /**
@@ -64,7 +64,7 @@ export class FeatureFlagEnabledGuard implements CanActivate {
 			context.getHandler(), // Returns a reference to the handler (method) that will be invoked next in the request pipeline.
 			context.getClass() // Returns the *type* of the controller class which the current handler belongs to.
 		]);
-		if (!!flagFeatures[flag]) {
+		if (flag && (flagFeatures as Record<FeatureEnum, boolean>)[flag]) {
 			return true;
 		}
 

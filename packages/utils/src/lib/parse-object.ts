@@ -8,7 +8,7 @@ import { isObject } from './is-object';
  * @param callback - The function to apply to each primitive value.
  * @returns The modified object.
  */
-export function parseObject<T extends object>(source: T, callback: (value: any) => any): T {
+export function parseObject<T extends Record<string, any>>(source: T, callback: (value: any) => any): T {
 	if (!isObject(source)) {
 		return source;
 	}
@@ -18,10 +18,10 @@ export function parseObject<T extends object>(source: T, callback: (value: any) 
 
 		if (isObject(value)) {
 			if (!isClassInstance(value)) {
-				source[key] = parseObject(value, callback);
+				(source as any)[key] = parseObject(value, callback);
 			}
 		} else {
-			source[key] = callback(value);
+			(source as any)[key] = callback(value);
 		}
 	}
 

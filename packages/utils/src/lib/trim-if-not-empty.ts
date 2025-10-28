@@ -15,5 +15,5 @@ import { isNotEmpty } from './is-not-empty';
  * ```
  */
 export const trimIfNotEmpty = (value?: string): string | undefined => {
-	return isNotEmpty(value) ? value.trim() : undefined;
+	return isNotEmpty(value) ? value!.trim() : undefined;
 };

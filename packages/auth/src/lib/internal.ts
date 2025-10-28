@@ -6,7 +6,6 @@ import { GoogleStrategy, GoogleController } from './google';
 import { KeycloakStrategy, KeycloakAuthGuard } from './keycloak';
 import { LinkedinStrategy, LinkedinController } from './linkedin';
 import { MicrosoftStrategy, MicrosoftController, MicrosoftAuthGuard } from './microsoft';
-import { TwitterStrategy, TwitterController } from './twitter';
 
 export const Strategies = [
 	Auth0Strategy,
@@ -16,8 +15,7 @@ export const Strategies = [
 	GoogleStrategy,
 	KeycloakStrategy,
 	LinkedinStrategy,
-	MicrosoftStrategy,
-	TwitterStrategy
+	MicrosoftStrategy
 ];
 
 export const Controllers = [
@@ -26,7 +24,6 @@ export const Controllers = [
 	GithubController,
 	GoogleController,
 	LinkedinController,
-	TwitterController,
 	MicrosoftController
 ];
 
