@@ -491,19 +491,77 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 
 	async createInvoiceEstimateItems() {
 		if (!this.organization) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.ORGANIZATION_NOT_FOUND'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
 			return;
 		}
 
 		const createdInvoice = this.createdInvoice;
+		if (!createdInvoice || !createdInvoice.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NOT_CREATED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
 		const { id: organizationId } = this.organization;
 		const { tenantId } = this.store.user;
 
 		const tableSources = await this.smartTableSource.getAll();
 
+		if (!tableSources || tableSources.length === 0) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.NO_INVOICE_ITEMS'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
 		const invoiceItems: IInvoiceItemCreateInput[] = [];
 
 		for (const invoiceItem of tableSources) {
+			// Validate required fields for each invoice item
+			if (!invoiceItem.description || invoiceItem.description.trim() === '') {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.ERROR.ITEM_DESCRIPTION_REQUIRED'),
+					this.getTranslation('TOASTR.TITLE.ERROR')
+				);
+				return;
+			}
+
+			if (isNaN(Number(invoiceItem.price)) || Number(invoiceItem.price) <= 0) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.ERROR.ITEM_PRICE_INVALID'),
+					this.getTranslation('TOASTR.TITLE.ERROR')
+				);
+				return;
+			}
+
+			if (isNaN(Number(invoiceItem.quantity)) || Number(invoiceItem.quantity) <= 0) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.ERROR.ITEM_QUANTITY_INVALID'),
+					this.getTranslation('TOASTR.TITLE.ERROR')
+				);
+				return;
+			}
+
 			const id = invoiceItem.selectedItem ? invoiceItem.selectedItem.id : null;
+			
+			// For specific invoice types, selectedItem is required
+			if (
+				this.selectedInvoiceType !== InvoiceTypeEnum.DETAILED_ITEMS &&
+				(!invoiceItem.selectedItem || !invoiceItem.selectedItem.id)
+			) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.ERROR.ITEM_SELECTION_REQUIRED'),
+					this.getTranslation('TOASTR.TITLE.ERROR')
+				);
+				return;
+			}
+
 			const itemToAdd = {
 				description: invoiceItem.description,
 				price: Number(invoiceItem.price),
@@ -537,10 +595,16 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			}
 			invoiceItems.push(itemToAdd);
 		}
+		
 		try {
-			return await this.invoiceItemService.createBulk(createdInvoice.id, invoiceItems);
+			const result = await this.invoiceItemService.createBulk(createdInvoice.id, invoiceItems);
+			return result;
 		} catch (error) {
-			this.toastrService.danger(error);
+			console.error('Invoice items creation error:', error);
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.ITEMS_CREATE_FAILED') + ': ' + (error?.message || error?.error?.message || 'Unknown error'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
 		}
 	}
 
@@ -567,6 +631,19 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 	}
 
 	async addInvoice(status: string, sendTo?: string) {
+		// Validate form before proceeding
+		if (this.form.invalid) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.FORM_INVALID'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			// Mark all fields as touched to show validation errors
+			Object.keys(this.form.controls).forEach(key => {
+				this.form.get(key).markAsTouched();
+			});
+			return;
+		}
+
 		const tableSources = await this.smartTableSource.getAll();
 		if (isEmpty(tableSources)) {
 			this.toastrService.danger(
@@ -576,7 +653,17 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			return;
 		}
 
-		const { invoiceNumber, invoiceDate, dueDate } = this.form.value;
+		const { invoiceNumber, invoiceDate, dueDate, organizationContact } = this.form.value;
+		
+		// Validate required fields
+		if (!organizationContact || !organizationContact.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
 		if (!invoiceDate || !dueDate || compareDate(invoiceDate, dueDate)) {
 			this.toastrService.danger(
 				this.getTranslation('INVOICES_PAGE.INVALID_DATES'),
@@ -585,25 +672,48 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			return;
 		}
 
-		const invoice = await this.invoicesService.getAll({
-			invoiceNumber
-		});
+		// Check if invoice number already exists
+		try {
+			const invoice = await this.invoicesService.getAll({
+				invoiceNumber
+			});
 
-		if (invoice.items.length) {
+			if (invoice.items.length) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE'),
+					this.getTranslation('TOASTR.TITLE.WARNING')
+				);
+				return;
+			}
+		} catch (error) {
+			console.error('Error checking invoice number:', error);
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE'),
-				this.getTranslation('TOASTR.TITLE.WARNING')
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NUMBER_CHECK_FAILED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
 			return;
 		}
 
-		await this.createInvoiceEstimate(status, sendTo);
-		await this.createInvoiceEstimateItems();
+		// Create invoice estimate
+		const createdInvoice = await this.createInvoiceEstimate(status, sendTo);
+		if (!createdInvoice) {
+			// Error already shown in createInvoiceEstimate
+			return;
+		}
+
+		// Create invoice items
+		const createdItems = await this.createInvoiceEstimateItems();
+		if (!createdItems) {
+			// Error already shown in createInvoiceEstimateItems
+			return;
+		}
+
+		// Create invoice history
 		await this.createInvoiceEstimateHistory();
 
 		if (this.isEstimate) {
 			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE'),
+				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE_SUCCESS'),
 				this.getTranslation('TOASTR.TITLE.SUCCESS')
 			);
 			this.router.navigate(['/pages/accounting/invoices/estimates'], {
@@ -613,7 +723,7 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			});
 		} else {
 			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE'),
+				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE_SUCCESS'),
 				this.getTranslation('TOASTR.TITLE.SUCCESS')
 			);
 			this.router.navigate(['/pages/accounting/invoices'], {
@@ -626,15 +736,30 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 
 	async sendToContact() {
 		if (!this.organization) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.ORGANIZATION_NOT_FOUND'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
 			return;
 		}
 
 		const { tenantId } = this.store.user;
 		const { organizationContact } = this.form.value;
 
-		if (organizationContact.id) {
-			await this.addInvoice(InvoiceStatusTypesEnum.SENT, organizationContact.id);
-			try {
+		if (!organizationContact || !organizationContact.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.SEND.NOT_LINKED'),
+				this.getTranslation('TOASTR.TITLE.WARNING')
+			);
+			return;
+		}
+
+		// First create the invoice
+		await this.addInvoice(InvoiceStatusTypesEnum.SENT, organizationContact.id);
+		
+		// Then add history record
+		try {
+			if (this.createdInvoice && this.createdInvoice.id) {
 				await this.invoiceEstimateHistoryService.add({
 					action: this.isEstimate
 						? this.getTranslation('INVOICES_PAGE.ESTIMATE_SENT_TO', {
@@ -651,18 +776,30 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 					organizationId: this.organization.id,
 					tenantId
 				});
-			} catch (error) {
-				console.log(error, 'error');
 			}
-		} else {
+		} catch (error) {
+			console.error('Error adding invoice history:', error);
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.SEND.NOT_LINKED'),
-				this.getTranslation('TOASTR.TITLE.WARNING')
+				this.getTranslation('INVOICES_PAGE.ERROR.HISTORY_CREATE_FAILED') + ': ' + (error?.message || 'Unknown error'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
 		}
 	}
 
 	async sendViaEmail() {
+		// Validate form before proceeding
+		if (this.form.invalid) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.FORM_INVALID'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			// Mark all fields as touched to show validation errors
+			Object.keys(this.form.controls).forEach(key => {
+				this.form.get(key).markAsTouched();
+			});
+			return;
+		}
+
 		const tableSources = await this.smartTableSource.getAll();
 		if (isEmpty(tableSources)) {
 			this.toastrService.danger(
@@ -672,7 +809,17 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			return;
 		}
 
-		const { invoiceNumber, invoiceDate, dueDate } = this.form.value;
+		const { invoiceNumber, invoiceDate, dueDate, organizationContact } = this.form.value;
+		
+		// Validate required fields
+		if (!organizationContact || !organizationContact.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
 		if (!invoiceDate || !dueDate || compareDate(invoiceDate, dueDate)) {
 			this.toastrService.danger(
 				this.getTranslation('INVOICES_PAGE.INVALID_DATES'),
@@ -681,50 +828,80 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			return;
 		}
 
-		const invoiceExists = await this.invoicesService.getAll({
-			invoiceNumber
-		});
-		if (invoiceExists.items.length) {
+		// Check if invoice number already exists
+		try {
+			const invoiceExists = await this.invoicesService.getAll({
+				invoiceNumber
+			});
+			if (invoiceExists.items.length) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE'),
+					this.getTranslation('TOASTR.TITLE.WARNING')
+				);
+				return;
+			}
+		} catch (error) {
+			console.error('Error checking invoice number:', error);
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE'),
-				this.getTranslation('TOASTR.TITLE.WARNING')
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NUMBER_CHECK_FAILED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
 			return;
 		}
 
+		// Create invoice and items
 		const invoice = await this.createInvoiceEstimate(InvoiceStatusTypesEnum.SENT);
+		if (!invoice) {
+			// Error already shown in createInvoiceEstimate
+			return;
+		}
+
 		const invoiceItems = await this.createInvoiceEstimateItems();
+		if (!invoiceItems) {
+			// Error already shown in createInvoiceEstimateItems
+			return;
+		}
 
-		await firstValueFrom(
-			this.dialogService.open(InvoiceEmailMutationComponent, {
-				context: {
-					invoice: invoice,
-					invoiceItems: invoiceItems,
-					isEstimate: this.isEstimate
-				}
-			}).onClose
-		);
+		try {
+			const dialogResult = await firstValueFrom(
+				this.dialogService.open(InvoiceEmailMutationComponent, {
+					context: {
+						invoice: invoice,
+						invoiceItems: invoiceItems,
+						isEstimate: this.isEstimate
+					}
+				}).onClose
+			);
 
-		if (this.isEstimate) {
-			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE'),
-				this.getTranslation('TOASTR.TITLE.SUCCESS')
-			);
-			this.router.navigate(['/pages/accounting/invoices/estimates'], {
-				queryParams: {
-					date: moment(invoiceDate).format('MM-DD-YYYY')
+			if (dialogResult) {
+				if (this.isEstimate) {
+					this.toastrService.success(
+						this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE_SUCCESS'),
+						this.getTranslation('TOASTR.TITLE.SUCCESS')
+					);
+					this.router.navigate(['/pages/accounting/invoices/estimates'], {
+						queryParams: {
+							date: moment(invoiceDate).format('MM-DD-YYYY')
+						}
+					});
+				} else {
+					this.toastrService.success(
+						this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE_SUCCESS'),
+						this.getTranslation('TOASTR.TITLE.SUCCESS')
+					);
+					this.router.navigate(['/pages/accounting/invoices'], {
+						queryParams: {
+							date: moment(invoiceDate).format('MM-DD-YYYY')
+						}
+					});
 				}
-			});
-		} else {
-			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE'),
-				this.getTranslation('TOASTR.TITLE.SUCCESS')
+			}
+		} catch (error) {
+			console.error('Error sending invoice via email:', error);
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.EMAIL_SEND_FAILED') + ': ' + (error?.message || 'Unknown error'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
-			this.router.navigate(['/pages/accounting/invoices'], {
-				queryParams: {
-					date: moment(invoiceDate).format('MM-DD-YYYY')
-				}
-			});
 		}
 	}
 
