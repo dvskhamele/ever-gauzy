@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/apps/gauzy"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/apps/gauzy/index.html"
+    }
+  ],
+  "buildCommand": "yarn build:gauzy:prod",
+  "outputDirectory": "dist/apps/gauzy"
+}
