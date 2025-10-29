@@ -8052,3 +8052,333 @@ User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-
 Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
 [32m[Nest] 27576  - [39m29/10/2025, 9:25:50 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 77809177-8dab-48bb-bdcf-5046ffb398f4: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
 [95m[Nest] 27576  - [39m29/10/2025, 9:25:50 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:26:16 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ee5a81ad-a58e-4ae6-8716-921adeb58abd: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:26:16 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ee5a81ad-a58e-4ae6-8716-921adeb58abd: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:26:16 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:26:42 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 506ac891-36e4-489a-9a49-7250cf9eafcf: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:26:42 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 506ac891-36e4-489a-9a49-7250cf9eafcf: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:26:42 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:27:08 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 38460515-61f1-4ce8-ad51-7edb21c8dd43: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions NOT loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:27:08 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 38460515-61f1-4ce8-ad51-7edb21c8dd43: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:27:08 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:27:34 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 2237d6d0-0f61-422f-9341-787c555fd57b: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:27:34 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 2237d6d0-0f61-422f-9341-787c555fd57b: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:27:34 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:00 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 5e527505-55d0-4d0e-90ce-5316be19f906: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:00 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 5e527505-55d0-4d0e-90ce-5316be19f906: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:28:00 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:26 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext b81e383c-f847-4bae-912b-d5713d3e6c29: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:26 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext b81e383c-f847-4bae-912b-d5713d3e6c29: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:28:26 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:52 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 2afc90f0-08a4-43dc-9669-ec62b439843a: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:28:52 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 2afc90f0-08a4-43dc-9669-ec62b439843a: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:28:52 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:29:18 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 1cba3791-a2ed-4059-a1c4-ab2d8b117113: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:29:18 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 1cba3791-a2ed-4059-a1c4-ab2d8b117113: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:29:18 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:29:44 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 0811d14e-f216-4494-b1cb-911200030159: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:29:44 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 0811d14e-f216-4494-b1cb-911200030159: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:29:44 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:30:10 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 38ede074-72d1-4cf5-a74a-a3610b5a8ed4: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:30:10 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 38ede074-72d1-4cf5-a74a-a3610b5a8ed4: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:30:10 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:30:36 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext a1a17a91-2afe-42d9-9699-0f29cee97ee3: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:30:36 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext a1a17a91-2afe-42d9-9699-0f29cee97ee3: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:30:36 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:02 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 0db23a38-6923-4a69-899e-275056dd8d32: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:02 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 0db23a38-6923-4a69-899e-275056dd8d32: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:31:02 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:28 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext eabcd4cb-e3da-4201-bed7-8b5a412a4e11: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:28 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext eabcd4cb-e3da-4201-bed7-8b5a412a4e11: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:31:28 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:54 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ddc29286-a521-40ac-86df-26ce380e45fb: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:31:54 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ddc29286-a521-40ac-86df-26ce380e45fb: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:31:54 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:32:20 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 468ca454-efac-460c-89eb-b6ef0cf8e7e7: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions NOT loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:32:20 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 468ca454-efac-460c-89eb-b6ef0cf8e7e7: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:32:20 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:32:46 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 417833f9-5977-4330-9fa4-9eca1a544d86: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:32:46 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 417833f9-5977-4330-9fa4-9eca1a544d86: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:32:46 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:33:12 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext f057a610-2583-4d48-adfe-26a7ea3ab026: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:33:12 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext f057a610-2583-4d48-adfe-26a7ea3ab026: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:33:12 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:33:38 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 56c8a1d7-4223-495c-ae04-ec5c1561d983: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:33:38 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 56c8a1d7-4223-495c-ae04-ec5c1561d983: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:33:38 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:04 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 9e279889-25fd-4589-97ba-cd32100e4235: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:04 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 9e279889-25fd-4589-97ba-cd32100e4235: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:34:04 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:30 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 3af27804-6439-4f1b-8e15-5b520ab2fe01: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:30 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 3af27804-6439-4f1b-8e15-5b520ab2fe01: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:34:30 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:56 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext f59189a1-ff16-4f51-96f4-c60cda66d365: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:34:56 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext f59189a1-ff16-4f51-96f4-c60cda66d365: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:34:56 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:35:22 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 04683a85-0399-4ef0-9cde-7098a79b379f: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:35:22 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 04683a85-0399-4ef0-9cde-7098a79b379f: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:35:22 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:35:48 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ad7030bc-f2a0-4676-87d8-58e7c527242d: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:35:48 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext ad7030bc-f2a0-4676-87d8-58e7c527242d: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:35:48 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:36:14 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 54361946-4d63-4e28-a112-b70da2c8899c: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:36:14 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 54361946-4d63-4e28-a112-b70da2c8899c: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:36:14 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:36:40 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext baa9f56b-d57f-4821-a6c3-09c3232fd63d: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:36:40 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext baa9f56b-d57f-4821-a6c3-09c3232fd63d: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:36:40 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:06 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 13c0e85b-bfcc-42b9-a448-f0a243003f30: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:06 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 13c0e85b-bfcc-42b9-a448-f0a243003f30: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:37:06 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:32 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 3929fbc2-024b-424c-94b8-86ffcf2289a1: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions NOT loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:32 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 3929fbc2-024b-424c-94b8-86ffcf2289a1: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:37:32 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:58 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 5c458610-e349-45df-8f23-3eaa48f26f14: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:37:58 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 5c458610-e349-45df-8f23-3eaa48f26f14: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:37:58 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:38:24 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext b4ea1873-ec34-4e3d-9b5c-b6034efac985: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:38:24 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext b4ea1873-ec34-4e3d-9b5c-b6034efac985: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:38:24 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
+[32m[Nest] 27576  - [39m29/10/2025, 9:38:50 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 81e45650-0a69-48e2-a044-1dc89d3d9f37: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 started.[39m
+AuthGuard canActivate called
+TenantPermissionGuard canActivate called
+TenantBaseGuard canActivate called
+Guard TenantBase: Access Allowed. TenantId: c4707f95-65be-4ffa-b465-33fcdf2097c3
+PermissionGuard canActivate called
+Checking User Permissions from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER
+User Permissions loaded from Cache with key: userPermissions_c4707f95-65be-4ffa-b465-33fcdf2097c3_ee503dcf-dc9f-41f4-9055-a2e8eef5077d_ALL_ORG_VIEW_TIME_TRACKER. Value: true
+Access granted.  User ID: d4a0508b-5ecc-4f91-9f3d-03fc795d4a0d, Role: SUPER_ADMIN, Tenant ID:', c4707f95-65be-4ffa-b465-33fcdf2097c3, Permissions Checked: ALL_ORG_VIEW, TIME_TRACKER
+[32m[Nest] 27576  - [39m29/10/2025, 9:38:50 pm [32m    LOG[39m [38;5;3m[RequestContextMiddleware] [39m[32mContext 81e45650-0a69-48e2-a044-1dc89d3d9f37: GET request to http://localhost:3000/api/timesheet/timer/status?tenantId=c4707f95-65be-4ffa-b465-33fcdf2097c3&organizationId=5c313f38-d9aa-4816-b789-33bc93986388&relations=employee&todayStart=2025-10-28%2018%3A30%3A00&todayEnd=2025-10-29%2018%3A29%3A59 completed with status 304.[39m
+[95m[Nest] 27576  - [39m29/10/2025, 9:38:50 pm [95m  DEBUG[39m [38;5;3m[WebhookService] [39m[95mMake.com integration is not enabled for this tenant, skipping event emission[39m
