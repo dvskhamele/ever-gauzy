@@ -398,9 +398,24 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 	}
 
 	async createInvoiceEstimate(status: string, sendTo?: string) {
+		// Wait for organization to be loaded if not available
 		if (!this.organization) {
-			return;
+			// Try to get organization from store
+			const organization = await firstValueFrom(
+				this.store.selectedOrganization$.pipe(filter(org => !!org))
+			);
+			
+			if (!organization) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.ERROR.ORGANIZATION_NOT_FOUND'),
+					this.getTranslation('TOASTR.TITLE.ERROR')
+				);
+				return;
+			}
+			
+			this.organization = organization;
 		}
+		
 		const { id: organizationId } = this.organization;
 		const { tenantId } = this.store.user;
 		const { value: currency } = this.currency;
@@ -418,6 +433,23 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			organizationContact,
 			tags
 		} = this.form.value;
+
+		// Validate required fields before attempting to create invoice
+		if (!organizationContact || !organizationContact.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
+		if (!invoiceDate || !dueDate) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.DATES_REQUIRED'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
 
 		try {
 			const createdInvoice = await this.invoicesService.add({
@@ -449,7 +481,11 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			this.createdInvoice = createdInvoice;
 			return createdInvoice;
 		} catch (error) {
-			this.toastrService.danger(error);
+			console.error('Invoice creation error:', error);
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CREATE_FAILED') + ': ' + (error?.message || error?.error?.message || 'Unknown error'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
 		}
 	}
 
