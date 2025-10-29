@@ -3379,6 +3379,24 @@
 			"GENERATE": "Generate a link to the {{ text }} that anyone with the link can view.",
 			"ACCESS": "Anyone with access to this link can view the {{ text }}.",
 			"COPY_TO_CLIPBOARD_TOOLTIP": "Copy public link to clipboard"
+		},
+		"ERROR": {
+			"FORM_INVALID": "The invoice form is invalid. Please check all required fields and try again.",
+			"INVOICE_NUMBER_INVALID": "The invoice number is invalid",
+			"INVOICE_DATE_REQUIRED": "Invoice date is required",
+			"DUE_DATE_REQUIRED": "Due date is required",
+			"DUE_DATE_BEFORE_INVOICE_DATE": "Due date must be after invoice date",
+			"CONTACT_REQUIRED": "Please select a client/contact",
+			"CONTACT_REQUIRED_DETAILED": "A client/contact is required to create an invoice",
+			"CURRENCY_REQUIRED": "Please select a currency",
+			"VALIDATION_FAILED": "Form validation failed",
+			"SERVER_ERROR": "Server error occurred",
+			"UNKNOWN_ERROR": "An unknown error occurred",
+			"CREATE_FAILED": "Failed to create invoice",
+			"INVOICE_CREATION_FAILED": "Invoice creation failed",
+			"INVOICE_ITEMS_CREATION_FAILED": "Invoice items creation failed",
+			"INVOICE_NUMBER_CHECK_FAILED": "Failed to check if invoice number already exists",
+			"ORGANIZATION_NOT_FOUND": "Organization information not found"
 		}
 	},
 	"PAYMENTS_PAGE": {
