@@ -9,11 +9,12 @@ import { ProposalsService } from '@gauzy/ui-core/core';
  * If an error occurs, the user is redirected to the employees page.
  *
  * @param route The activated route snapshot containing the route parameters.
+ * @param state The route state snapshot.
  * @returns An observable that emits the resolved proposal or `null` in case of an error.
  */
-export const ProposalDetailsResolver: ResolveFn<Observable<IProposal>> = (
+export const ProposalDetailsResolver: ResolveFn<Observable<IProposal | null>> = (
 	route: ActivatedRouteSnapshot
-): Observable<IProposal> => {
+): Observable<IProposal | null> => {
 	// Injecting the necessary services
 	const _proposalsService = inject(ProposalsService);
 	const _router = inject(Router);
