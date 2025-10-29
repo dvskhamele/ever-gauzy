@@ -407,10 +407,10 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			
 			if (!organization) {
 				this.toastrService.danger(
-					this.getTranslation('INVOICES_PAGE.ERROR.ORGANIZATION_NOT_FOUND'),
+					this.getTranslation('INVOICES_PAGE.ERROR.ORGANIZATION_NOT_FOUND') + '. Please refresh the page and try again.',
 					this.getTranslation('TOASTR.TITLE.ERROR')
 				);
-				return;
+				return null;
 			}
 			
 			this.organization = organization;
@@ -434,58 +434,103 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			tags
 		} = this.form.value;
 
-		// Validate required fields before attempting to create invoice
+		// Detailed validation with user-friendly messages
 		if (!organizationContact || !organizationContact.id) {
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED'),
+				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED') + '. Please select a client/contact before creating an invoice.',
 				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
-			return;
+			return null;
 		}
 
-		if (!invoiceDate || !dueDate) {
+		if (!invoiceDate) {
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.ERROR.DATES_REQUIRED'),
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_DATE_REQUIRED') + '. Please select an invoice date.',
 				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
-			return;
+			return null;
 		}
+
+		if (!dueDate) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.DUE_DATE_REQUIRED') + '. Please select a due date.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return null;
+		}
+
+		// Validate that all required form fields have values
+		if (!invoiceNumber || invoiceNumber <= 0) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NUMBER_INVALID') + '. Invoice number must be greater than 0.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return null;
+		}
+
+		if (!currency) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CURRENCY_REQUIRED') + '. Please select a currency.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return null;
+		}
+
+		// Log the invoice data being sent for debugging
+		const invoiceData = {
+			invoiceNumber,
+			invoiceDate: moment(invoiceDate).startOf('day').toDate(),
+			dueDate: moment(dueDate).endOf('day').toDate(),
+			currency,
+			discountValue: discountValue || 0,
+			discountType: discountType || null,
+			tax: tax || 0,
+			tax2: tax2 || 0,
+			taxType: taxType || null,
+			tax2Type: tax2Type || null,
+			terms: terms || '',
+			paid: false,
+			totalValue: +this.total.toFixed(2),
+			toContact: organizationContact,
+			organizationContactId: organizationContact.id,
+			fromOrganization: this.organization,
+			organizationId,
+			tenantId,
+			invoiceType: this.selectedInvoiceType || 'DETAILED_ITEMS',
+			tags: tags || [],
+			isEstimate: this.isEstimate,
+			status: status,
+			sentTo: sendTo || null,
+			isArchived: false
+		};
+
+		console.log('Attempting to create invoice with data:', invoiceData);
 
 		try {
-			const createdInvoice = await this.invoicesService.add({
-				invoiceNumber,
-				invoiceDate: moment(invoiceDate).startOf('day').toDate(),
-				dueDate: moment(dueDate).endOf('day').toDate(),
-				currency,
-				discountValue,
-				discountType,
-				tax,
-				tax2,
-				taxType,
-				tax2Type,
-				terms,
-				paid: false,
-				totalValue: +this.total.toFixed(2),
-				toContact: organizationContact,
-				organizationContactId: organizationContact.id,
-				fromOrganization: this.organization,
-				organizationId,
-				tenantId,
-				invoiceType: this.selectedInvoiceType,
-				tags,
-				isEstimate: this.isEstimate,
-				status: status,
-				sentTo: sendTo,
-				isArchived: false
-			});
+			const createdInvoice = await this.invoicesService.add(invoiceData);
+			console.log('Invoice created successfully:', createdInvoice);
 			this.createdInvoice = createdInvoice;
 			return createdInvoice;
 		} catch (error) {
-			console.error('Invoice creation error:', error);
-			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.ERROR.CREATE_FAILED') + ': ' + (error?.message || error?.error?.message || 'Unknown error'),
-				this.getTranslation('TOASTR.TITLE.ERROR')
-			);
+			console.error('Invoice creation failed:', error);
+			
+			// Provide detailed error message to user
+			let errorMessage = this.getTranslation('INVOICES_PAGE.ERROR.CREATE_FAILED');
+			
+			if (error?.error?.message) {
+				errorMessage += ': ' + error.error.message;
+			} else if (error?.message) {
+				errorMessage += ': ' + error.message;
+			} else if (error?.status === 400) {
+				errorMessage += ': ' + this.getTranslation('INVOICES_PAGE.ERROR.VALIDATION_FAILED') + '. Please check all required fields are filled correctly.';
+			} else if (error?.status === 500) {
+				errorMessage += ': ' + this.getTranslation('INVOICES_PAGE.ERROR.SERVER_ERROR') + '. Please try again or contact support.';
+			} else {
+				errorMessage += ': ' + this.getTranslation('INVOICES_PAGE.ERROR.UNKNOWN_ERROR') + '. Please check browser console for details.';
+			}
+			
+			this.toastrService.danger(errorMessage, this.getTranslation('TOASTR.TITLE.ERROR'));
+			return null;
 		}
 	}
 
@@ -567,43 +612,120 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 	}
 
 	async addInvoice(status: string, sendTo?: string) {
+		console.log('Starting invoice creation process...');
+		
 		const tableSources = await this.smartTableSource.getAll();
+		console.log('Invoice items to create:', tableSources);
+		
 		if (isEmpty(tableSources)) {
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.INVOICE_ITEM.NO_ITEMS'),
+				this.getTranslation('INVOICES_PAGE.INVOICE_ITEM.NO_ITEMS') + '. Please add at least one invoice item before saving.',
 				this.getTranslation('TOASTR.TITLE.WARNING')
 			);
 			return;
 		}
 
-		const { invoiceNumber, invoiceDate, dueDate } = this.form.value;
-		if (!invoiceDate || !dueDate || compareDate(invoiceDate, dueDate)) {
+		const { invoiceNumber, invoiceDate, dueDate, organizationContact } = this.form.value;
+		console.log('Invoice form values:', { invoiceNumber, invoiceDate, dueDate, organizationContact });
+		
+		if (!invoiceNumber || invoiceNumber <= 0) {
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.INVALID_DATES'),
-				this.getTranslation('TOASTR.TITLE.WARNING')
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NUMBER_INVALID') + '. Please enter a valid invoice number.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
 			);
 			return;
 		}
 
-		const invoice = await this.invoicesService.getAll({
-			invoiceNumber
-		});
-
-		if (invoice.items.length) {
+		if (!invoiceDate) {
 			this.toastrService.danger(
-				this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE'),
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_DATE_REQUIRED') + '. Please select an invoice date.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
+		if (!dueDate) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.DUE_DATE_REQUIRED') + '. Please select a due date.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
+		if (compareDate(invoiceDate, dueDate)) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.INVALID_DATES') + '. Due date must be after invoice date.',
 				this.getTranslation('TOASTR.TITLE.WARNING')
 			);
 			return;
 		}
 
-		await this.createInvoiceEstimate(status, sendTo);
-		await this.createInvoiceEstimateItems();
+		if (!organizationContact || !organizationContact.id) {
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.CONTACT_REQUIRED') + '. Please select a client/contact.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
+		// Check if invoice number already exists
+		try {
+			const invoice = await this.invoicesService.getAll({
+				invoiceNumber
+			});
+			console.log('Existing invoice check result:', invoice);
+
+			if (invoice.items.length) {
+				this.toastrService.danger(
+					this.getTranslation('INVOICES_PAGE.INVOICE_NUMBER_DUPLICATE') + '. Please use a different invoice number.',
+					this.getTranslation('TOASTR.TITLE.WARNING')
+				);
+				return;
+			}
+		} catch (error) {
+			console.error('Error checking invoice number:', error);
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_NUMBER_CHECK_FAILED') + ': ' + (error?.message || 'Unknown error'),
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+
+		// Create invoice estimate
+		console.log('Creating invoice estimate...');
+		const createdInvoice = await this.createInvoiceEstimate(status, sendTo);
+		if (!createdInvoice) {
+			console.log('Invoice creation failed');
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_CREATION_FAILED') + '. Please check the form data and try again.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+		
+		console.log('Invoice created successfully:', createdInvoice);
+
+		// Create invoice items
+		console.log('Creating invoice items...');
+		const createdItems = await this.createInvoiceEstimateItems();
+		if (!createdItems) {
+			console.log('Invoice items creation failed');
+			this.toastrService.danger(
+				this.getTranslation('INVOICES_PAGE.ERROR.INVOICE_ITEMS_CREATION_FAILED') + '. Invoice was created but items could not be added.',
+				this.getTranslation('TOASTR.TITLE.ERROR')
+			);
+			return;
+		}
+		
+		console.log('Invoice items created successfully:', createdItems);
+
+		// Create invoice history
+		console.log('Creating invoice history...');
 		await this.createInvoiceEstimateHistory();
 
 		if (this.isEstimate) {
 			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE'),
+				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_ESTIMATE_SUCCESS') + ' Estimate #' + createdInvoice.invoiceNumber + ' created successfully.',
 				this.getTranslation('TOASTR.TITLE.SUCCESS')
 			);
 			this.router.navigate(['/pages/accounting/invoices/estimates'], {
@@ -613,7 +735,7 @@ export class InvoiceAddComponent extends PaginationFilterBaseComponent implement
 			});
 		} else {
 			this.toastrService.success(
-				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE'),
+				this.getTranslation('INVOICES_PAGE.INVOICES_ADD_INVOICE_SUCCESS') + ' Invoice #' + createdInvoice.invoiceNumber + ' created successfully.',
 				this.getTranslation('TOASTR.TITLE.SUCCESS')
 			);
 			this.router.navigate(['/pages/accounting/invoices'], {
