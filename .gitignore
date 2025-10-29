@@ -151,3 +151,4 @@ apps/server-api/src/assets/icons/menu
 dist/
 build/
 tmp/
+.vercel
