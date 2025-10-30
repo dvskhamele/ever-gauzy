@@ -1,0 +1,8 @@
+[build]
+  command = "echo 'Skipping build'"
+  publish = "dist/apps/gauzy"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
