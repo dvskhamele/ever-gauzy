@@ -7,11 +7,10 @@
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "apps/gauzy/package.json",
-          "apps/gauzy/src/**",
-          "packages/ui-config/**",
-          "packages/ui-core/**",
-          "packages/contracts/**",
+          "dist/apps/gauzy/**",
+          "dist/packages/**",
+          "package.json",
+          "yarn.lock",
           "vercel.json"
         ]
       }
@@ -20,7 +19,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/apps/gauzy/server.js"
+      "dest": "dist/apps/gauzy/server.js"
     }
   ]
 }
