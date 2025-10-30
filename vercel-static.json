@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "dist/apps/gauzy/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/apps/gauzy/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/dist/apps/gauzy/index.html"
+    }
+  ]
+}
