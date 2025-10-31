@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-beasties-container>
+	<head>
+		<meta charset="utf-8">
+		<title>Gauzy</title>
+		<base href="/">
+		<meta name="ever:version" content="0.1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Ever Co. LTD">
+		<meta name="description" content="Business Management Platform">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="manifest" href="manifest.json">
+	<style>html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}html,body{margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}*,*::before,*::after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}body{margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}@media print {*,*::before,*::after{text-shadow:none !important;box-shadow:none !important}@page {size:a3}body{min-width:992px !important}}:root{--fa-style-family-brands:'Font Awesome 6 Brands';--fa-font-brands:normal 400 1em/1 'Font Awesome 6 Brands'}@font-face {font-family:'Font Awesome 6 Brands';font-style:normal;font-weight:400;font-display:block;src:url('fa-brands-400.86ee2658f0f3b5a5.woff2') format("woff2"), url('fa-brands-400.8eaf0c8893de015e.ttf') format("truetype")}:root{--fa-style-family-classic:'Font Awesome 6 Free';--fa-font-regular:normal 400 1em/1 'Font Awesome 6 Free'}@font-face {font-family:'Font Awesome 6 Free';font-style:normal;font-weight:400;font-display:block;src:url('fa-regular-400.849b82e233cfe2f9.woff2') format("woff2"), url('fa-regular-400.bd1cf947e4932a4d.ttf') format("truetype")}:root{--fa-style-family-classic:'Font Awesome 6 Free';--fa-font-solid:normal 900 1em/1 'Font Awesome 6 Free'}@font-face {font-family:'Font Awesome 6 Free';font-style:normal;font-weight:900;font-display:block;src:url('fa-solid-900.ee6983981ffcbb41.woff2') format("woff2"), url('fa-solid-900.7a5aa5abd625137f.ttf') format("truetype")}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}html,body{margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0}:root{--swiper-theme-color:#007aff}:root{--swiper-navigation-size:44px}body{--skeleton-bg:rgb(255, 255, 255);--skeleton-sidebar-bg:rgba(251, 251, 251, 1);--skeleton-border-basic-color-2:#f5f5f5;--skeleton-border-radius:0.625rem;--skeleton-button-rectangle-border-radius:2rem;--skeleton-card-bg:rgba(50, 50, 50, 0.03)}.skeleton-layout{position:fixed;top:0;left:0;width:100%;height:100%;z-index:var(--z-index-overlay, 1003);display:flex;background:var(--skeleton-bg, #fff)}.skeleton-sidebar{width:260px;background:var(--skeleton-sidebar-bg);padding:1rem;flex-shrink:0;display:flex;flex-direction:column;box-shadow:2px 0 8px 0 rgba(0, 0, 0, 0.03)}.skeleton-sidebar .skeleton-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}.skeleton-sidebar .skeleton-header .skeleton-logo{width:120px;height:40px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem)}.skeleton-sidebar .skeleton-header .skeleton-dropdown-icon{width:16px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-sidebar .skeleton-header .skeleton-menu-dots{width:20px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:50%}.skeleton-sidebar .skeleton-menu{flex:1}.skeleton-sidebar .skeleton-menu .skeleton-menu-item{display:flex;align-items:center;gap:12px;padding:8px 0;margin-bottom:8px}.skeleton-sidebar .skeleton-menu .skeleton-menu-item .skeleton-menu-icon{width:20px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius);flex-shrink:0}.skeleton-sidebar .skeleton-menu .skeleton-menu-item .skeleton-menu-text{width:100px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);flex:1;border-radius:var(--skeleton-border-radius)}.skeleton-sidebar .skeleton-menu .skeleton-menu-item .skeleton-menu-arrow{width:12px;height:12px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius);flex-shrink:0}.skeleton-sidebar .skeleton-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:1rem}.skeleton-sidebar .skeleton-footer .skeleton-user-avatar{width:40px;height:40px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:50%}.skeleton-sidebar .skeleton-footer .skeleton-collapse-icon{width:24px;height:24px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:50%}.skeleton-main-content{flex:1;padding:1rem;overflow-y:auto;background-color:var(--skeleton-card-bg)}.skeleton-top-header{display:flex;justify-content:flex-end;align-items:center;margin-bottom:1rem;padding:0.5rem 0}.skeleton-top-header .skeleton-header-actions{display:flex;gap:1rem;align-items:center}.skeleton-top-header .skeleton-header-actions .skeleton-create-button{width:80px;height:32px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-button-rectangle-border-radius)}.skeleton-top-header .skeleton-header-actions .skeleton-project-selector{display:flex;align-items:center;gap:8px;padding:0 12px;height:32px;border-radius:var(--skeleton-button-rectangle-border-radius);background:var(--skeleton-bg)}.skeleton-top-header .skeleton-header-actions .skeleton-project-selector .skeleton-selector-text{width:80px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem)}.skeleton-top-header .skeleton-header-actions .skeleton-project-selector .skeleton-selector-arrow{width:12px;height:12px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:2px}.skeleton-top-header .skeleton-header-actions .skeleton-date-range-picker{display:flex;align-items:center;gap:12px;padding:0 12px;height:32px;border-radius:var(--skeleton-button-rectangle-border-radius);background:var(--skeleton-bg)}.skeleton-top-header .skeleton-header-actions .skeleton-date-range-picker .skeleton-date-arrows{display:flex;gap:4px}.skeleton-top-header .skeleton-header-actions .skeleton-date-range-picker .skeleton-date-arrows .skeleton-arrow{width:16px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:2px}.skeleton-top-header .skeleton-header-actions .skeleton-date-range-picker .skeleton-date-text{width:140px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem)}.skeleton-top-header .skeleton-header-actions .skeleton-user-menu{width:24px;height:24px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:50%}.skeleton-nav-tabs{display:flex;gap:2rem;padding-bottom:1rem}.skeleton-nav-tabs .skeleton-nav-tab{display:flex;align-items:center;gap:8px;padding:8px 0}.skeleton-nav-tabs .skeleton-nav-tab .skeleton-tab-icon{width:20px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-nav-tabs .skeleton-nav-tab .skeleton-tab-text{width:80px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-page-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;padding-top:1rem}.skeleton-page-header .skeleton-page-info .skeleton-page-title{width:300px;height:28px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);margin-bottom:8px;border-radius:var(--skeleton-border-radius)}.skeleton-page-header .skeleton-page-info .skeleton-page-subtitle{width:350px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-page-header .skeleton-page-actions{display:flex;flex-direction:column;gap:1rem;align-items:flex-end}.skeleton-page-header .skeleton-page-actions .skeleton-time-widgets{display:flex;gap:1.5rem;align-items:center}.skeleton-page-header .skeleton-page-actions .skeleton-time-widgets .skeleton-time-info{width:180px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-page-header .skeleton-page-actions .skeleton-time-widgets .skeleton-manage-widgets{width:120px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:var(--skeleton-border-radius)}.skeleton-page-header .skeleton-page-actions .skeleton-auto-refresh{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:1.5rem;background:var(--skeleton-bg)}.skeleton-page-header .skeleton-page-actions .skeleton-auto-refresh .skeleton-refresh-toggle{width:40px;height:20px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:10px}.skeleton-page-header .skeleton-page-actions .skeleton-auto-refresh .skeleton-refresh-text{width:80px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:3px}.skeleton-page-header .skeleton-page-actions .skeleton-auto-refresh .skeleton-refresh-button{width:60px;height:24px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:12px}.skeleton-widgets-row{display:flex;gap:1rem;margin-bottom:2rem}.skeleton-widgets-row .skeleton-widget-item{flex:1;background-color:var(--skeleton-bg);border-radius:var(--skeleton-border-radius);padding:1.5rem;min-height:100px;position:relative}.skeleton-widgets-row .skeleton-widget-item .skeleton-widget-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}.skeleton-widgets-row .skeleton-widget-item .skeleton-widget-header .skeleton-widget-title{width:120px;height:14px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:3px}.skeleton-widgets-row .skeleton-widget-item .skeleton-widget-header .skeleton-widget-menu{width:16px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:2px}.skeleton-widgets-row .skeleton-widget-item .skeleton-widget-value{width:80px;height:36px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);margin-bottom:0.5rem;border-radius:4px}.skeleton-widgets-row .skeleton-widget-item .skeleton-widget-progress{width:100%;height:6px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:2px;margin-top:auto}.skeleton-windows-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:1rem;margin-bottom:2rem}.skeleton-windows-grid .skeleton-window-card{background:var(--skeleton-bg);border-radius:var(--skeleton-border-radius);min-height:80px;display:flex;flex-direction:column}.skeleton-windows-grid .skeleton-window-card .skeleton-window-header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 1.5rem 1rem 1.5rem}.skeleton-windows-grid .skeleton-window-card .skeleton-window-header .skeleton-window-title{width:120px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:3px}.skeleton-windows-grid .skeleton-window-card .skeleton-window-header .skeleton-window-menu{width:16px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:2px}.skeleton-windows-grid .skeleton-window-card .skeleton-window-content{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem}.skeleton-windows-grid .skeleton-window-card .skeleton-window-content .skeleton-empty-message{width:200px;height:16px;background:linear-gradient(90deg, var(--skeleton-bg) 0%, var(--skeleton-border-basic-color-2) 50%, var(--skeleton-bg) 100%);background-size:200% 100%;animation:shimmer 2s ease-in-out infinite;border-radius:var(--skeleton-border-radius, 0.4rem);border-radius:3px}@keyframes shimmer {0%{background-position:-200% 0;opacity:0.6}50%{opacity:0.8}100%{background-position:200% 0;opacity:0.6}}@media (prefers-reduced-motion: reduce) {.skeleton-layout,.skeleton-layout *{animation:none !important}}@media (max-width: 768px) {.skeleton-windows-grid{grid-template-columns:1fr}}*{scrollbar-color:var(--gauzy-scrollbar) transparent;scrollbar-width:thin}*::-webkit-scrollbar{width:var(--scrollbar-width);height:var(--scrollbar-width)}*::-webkit-scrollbar-track{background:transparent}*::-webkit-scrollbar-thumb{background:var(--gauzy-scrollbar);border-radius:1rem}body{-ms-overflow-style:none}html{--mat-sys-on-surface:initial}body{color:var(--text-basic-color);font-family:var(--text-paragraph-font-family);font-size:var(--text-paragraph-font-size);font-weight:var(--text-paragraph-font-weight);line-height:var(--text-paragraph-line-height)}</style><link rel="stylesheet" href="styles.ed0a7bae7c747eed.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.ed0a7bae7c747eed.css"></noscript></head>
+	<body>
+		<script src="assets/env.js"></script>
+		<ga-app></ga-app>
+
+		<div id="nb-global-spinner" class="skeleton-layout" role="status" aria-live="polite" aria-busy="true" aria-label="Loading dashboard">
+			<div class="skeleton-sidebar" aria-hidden="true">
+				<div class="skeleton-header">
+					<div class="skeleton-logo"></div>
+					<div class="skeleton-dropdown-icon"></div>
+					<div class="skeleton-menu-dots"></div>
+				</div>
+
+				<div class="skeleton-menu">
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+					<div class="skeleton-menu-item">
+						<div class="skeleton-menu-icon"></div>
+						<div class="skeleton-menu-text"></div>
+						<div class="skeleton-menu-arrow"></div>
+					</div>
+				</div>
+
+				<div class="skeleton-footer">
+					<div class="skeleton-user-avatar"></div>
+					<div class="skeleton-collapse-icon"></div>
+				</div>
+			</div>
+			<div class="skeleton-main-content" aria-hidden="true">
+				<div class="skeleton-top-header">
+					<div class="skeleton-header-actions">
+						<div class="skeleton-create-button"></div>
+						<div class="skeleton-project-selector">
+							<div class="skeleton-selector-text"></div>
+							<div class="skeleton-selector-arrow"></div>
+						</div>
+						<div class="skeleton-project-selector">
+							<div class="skeleton-selector-text"></div>
+							<div class="skeleton-selector-arrow"></div>
+						</div>
+						<div class="skeleton-project-selector">
+							<div class="skeleton-selector-text"></div>
+							<div class="skeleton-selector-arrow"></div>
+						</div>
+						<div class="skeleton-date-range-picker">
+							<div class="skeleton-date-arrows">
+								<div class="skeleton-arrow"></div>
+								<div class="skeleton-arrow"></div>
+							</div>
+							<div class="skeleton-date-text"></div>
+						</div>
+						<div class="skeleton-user-menu"></div>
+						<div class="skeleton-user-menu"></div>
+						<div class="skeleton-user-menu"></div>
+						<div class="skeleton-user-menu"></div>
+					</div>
+				</div>
+
+				<div class="skeleton-nav-tabs">
+					<div class="skeleton-nav-tab">
+						<div class="skeleton-tab-icon"></div>
+						<div class="skeleton-tab-text"></div>
+					</div>
+					<div class="skeleton-nav-tab">
+						<div class="skeleton-tab-icon"></div>
+						<div class="skeleton-tab-text"></div>
+					</div>
+					<div class="skeleton-nav-tab">
+						<div class="skeleton-tab-icon"></div>
+						<div class="skeleton-tab-text"></div>
+					</div>
+					<div class="skeleton-nav-tab">
+						<div class="skeleton-tab-icon"></div>
+						<div class="skeleton-tab-text"></div>
+					</div>
+				</div>
+
+				<div class="skeleton-page-header">
+					<div class="skeleton-page-info">
+						<div class="skeleton-page-title"></div>
+						<div class="skeleton-page-subtitle"></div>
+					</div>
+					<div class="skeleton-page-actions">
+						<div class="skeleton-time-widgets">
+							<div class="skeleton-time-info"></div>
+							<div class="skeleton-manage-widgets"></div>
+						</div>
+						<div class="skeleton-auto-refresh">
+							<div class="skeleton-refresh-toggle"></div>
+							<div class="skeleton-refresh-text"></div>
+							<div class="skeleton-refresh-button"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="skeleton-widgets-row">
+					<div class="skeleton-widget-item">
+						<div class="skeleton-widget-header">
+							<div class="skeleton-widget-title"></div>
+							<div class="skeleton-widget-menu"></div>
+						</div>
+						<div class="skeleton-widget-value"></div>
+						<div class="skeleton-widget-progress"></div>
+					</div>
+					<div class="skeleton-widget-item">
+						<div class="skeleton-widget-header">
+							<div class="skeleton-widget-title"></div>
+							<div class="skeleton-widget-menu"></div>
+						</div>
+						<div class="skeleton-widget-value"></div>
+						<div class="skeleton-widget-progress"></div>
+					</div>
+					<div class="skeleton-widget-item">
+						<div class="skeleton-widget-header">
+							<div class="skeleton-widget-title"></div>
+							<div class="skeleton-widget-menu"></div>
+						</div>
+						<div class="skeleton-widget-value"></div>
+						<div class="skeleton-widget-progress"></div>
+					</div>
+					<div class="skeleton-widget-item">
+						<div class="skeleton-widget-header">
+							<div class="skeleton-widget-title"></div>
+							<div class="skeleton-widget-menu"></div>
+						</div>
+						<div class="skeleton-widget-value"></div>
+						<div class="skeleton-widget-progress"></div>
+					</div>
+				</div>
+
+				<div class="skeleton-windows-grid">
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+					<div class="skeleton-window-card">
+						<div class="skeleton-window-header">
+							<div class="skeleton-window-title"></div>
+							<div class="skeleton-window-menu"></div>
+						</div>
+						<div class="skeleton-window-content">
+							<div class="skeleton-empty-message"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			try {
+				const gauzyStore = JSON.parse(localStorage.getItem('_gauzyStore') || '{}');
+				const savedTheme = gauzyStore.persist?.themeName;
+				const allowedThemes = new Set([
+					'gauzy-light',
+					'gauzy-dark',
+					'default',
+					'dark',
+					'cosmic',
+					'corporate',
+					'material',
+					'material-dark'
+				]);
+				const theme = allowedThemes.has(savedTheme) ? savedTheme : 'gauzy-light';
+				document.body.setAttribute('data-skeleton-theme', theme);
+			} catch {
+				document.body.setAttribute('data-skeleton-theme', 'gauzy-light');
+			}
+		</script>
+		<!-- Asynchronous script loading to improve performance -->
+		<script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js" async></script>
+	<script src="runtime.efa0237a1fd5abc0.js" type="module"></script><script src="polyfills.7237f8d97ab8d9ab.js" type="module"></script><script src="scripts.628b083a34b799a3.js" defer></script><script src="vendor.fbe60a4e06717884.js" type="module"></script><script src="main.1fb2df7dd96fbe3c.js" type="module"></script></body>
+</html>
