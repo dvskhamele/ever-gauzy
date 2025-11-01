@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { CKEditorModule } from 'ckeditor4-angular';
 import {
 	NbBadgeModule,
 	NbButtonModule,
@@ -127,7 +128,8 @@ import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
 		ProjectSelectModule,
 		SharedModule,
 		NbAccordionModule,
-		InvoiceViewInnerModule
+		InvoiceViewInnerModule,
+		CKEditorModule
 	],
 	providers: [
 		InvoicesService,
