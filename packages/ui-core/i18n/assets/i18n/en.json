@@ -5379,7 +5379,7 @@
 			"MANAGE_PRODUCT_INVENTORY_CREATE_FIRST_PRODUCT": "Manage Product Inventory, Create First Product"
 		},
 		"PROJECT": {
-			"MANAGE_PROJECT_CREATE_FIRST_PROJECT": "Manage Project, Create First Project"
+			"MANAGE_PROJECT_CREATE_FIRST_PROJECT": "Manage Classes/Subjects/Courses, Create First Class/Subject/Course"
 		},
 		"ORGANIZATION_TEAM": {
 			"MANAGE_ORGANIZATION_TEAM_CREATE_FIRST_TEAM": "Manage Organization Team, Create First Team"
