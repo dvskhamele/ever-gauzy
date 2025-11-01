@@ -6129,7 +6129,7 @@
 		"STOP_TIMER_CHANGE_CLIENT": "Please stop the timer before changing the client",
 		"ADD_CONTACT": "Add contact",
 		"ADD_TASK": "Add Task",
-		"STOP_TIMER_CHANGE_PROJECT": "Please stop the timer before changing the project",
+		"STOP_TIMER_CHANGE_PROJECT": "Please stop the timer before changing the class/subject/course",
 		"STOP_TIMER_CHANGE_TASK": "Please stop the timer before changing the task",
 		"STOP_TIMER_CHANGE_DESCRIPTION": "Please stop the timer before changing the description",
 		"STOP_TIMER_CHANGE_TEAM": "Please stop the timer before changing the team",
