@@ -6182,7 +6182,7 @@
 			"CANT_RUN_TIMER": "Your can't run timer for the moment",
 			"NOT_AUTHORIZED": "Your are not authorized to work",
 			"ACCOUNT_DELETED": "Your account is already deleted",
-			"PROJECT_ADDED": "Project added successfully",
+			"PROJECT_ADDED": "Class/Subject/Course added successfully",
 			"TASK_ADDED": "Task added successfully",
 			"CLIENT_ADDED": "Client added successfully"
 		},
