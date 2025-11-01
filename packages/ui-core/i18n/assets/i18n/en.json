@@ -5214,7 +5214,7 @@
 		"SELECT_EMPLOYEE": "Select Employee",
 		"SELECT_A_DATE": "Select A Date",
 		"SELECT_AN_ORGANIZATION": "Select An Organization",
-		"SELECT_PROJECT": "Select Project",
+		"SELECT_PROJECT": "Select Class/Subject/Course",
 		"SELECT_TEAM": "Select Team"
 	},
 	"HEADER_TITLE": {
