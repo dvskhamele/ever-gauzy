@@ -4846,7 +4846,7 @@
 		"TASK": "Task",
 		"CLIENT": "Client",
 		"CONTACT": "Contact",
-		"PROJECT": "Project",
+		"PROJECT": "Class/Subject/Course",
 		"ADD_EMPLOYEE": "Employee",
 		"CHAT": "Support Chat",
 		"FAQ": "FAQ",
