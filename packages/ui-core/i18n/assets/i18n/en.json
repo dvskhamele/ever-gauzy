@@ -5956,7 +5956,7 @@
 		"ADD_TIME_SUCCESS": "Time was added",
 		"VALIDATION": {
 			"CLIENT_REQUIRED": "Please select client",
-			"PROJECT_REQUIRED": "Please select project",
+			"PROJECT_REQUIRED": "Please select class/subject/course",
 			"TASK_REQUIRED": "Please select task",
 			"DESCRIPTION_REQUIRED": "Description is required"
 		},
