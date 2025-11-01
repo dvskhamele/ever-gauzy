@@ -5273,10 +5273,10 @@
 		}
 	},
 	"PROJECT_MANAGEMENT_PAGE": {
-		"THIS_TAB_WILL_SHOW_PROJECT_MANAGEMENT_CHARTS_AND_AGGREGATED_DATA": "This tab will show project management charts and aggregated data.",
+		"THIS_TAB_WILL_SHOW_PROJECT_MANAGEMENT_CHARTS_AND_AGGREGATED_DATA": "This tab will show class/subject/course management charts and aggregated data.",
 		"PROJECT_MODULE": {
-			"PROJECT": "Project",
-			"SELECT_PROJECT": "Select a project",
+			"PROJECT": "Class/Subject/Course",
+			"SELECT_PROJECT": "Select a class/subject/course",
 			"STATUS": "Status",
 			"TEAM_MEMBERS": "Team Members",
 			"TEAMS": "Teams",
