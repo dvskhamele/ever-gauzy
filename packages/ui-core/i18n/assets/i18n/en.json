@@ -3653,7 +3653,7 @@
 				"STATUS": "Status",
 				"WEIGHT": "Weight",
 				"TYPE": "Type",
-				"SELECT_PROJECT": "Select Project",
+				"SELECT_PROJECT": "Select Class/Subject/Course",
 				"SELECT_TASK": "Select Task",
 				"SELECT_KPI": "Select KPI",
 				"ASSIGN_AS_OBJECTIVE": "Assign as objective"
