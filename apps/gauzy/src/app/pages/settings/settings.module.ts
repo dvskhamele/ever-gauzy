@@ -24,7 +24,7 @@ import { EmailHistoryComponent } from './email-history/email-history.component';
 import { EmailFiltersComponent } from './email-history/email-filters/email-filters.component';
 import { EmailTemplatesModule } from '../email-templates/email-templates.module';
 import { SmsGatewayComponent } from './sms-gateway/sms-gateway.component';
-import { FinanceTemplatesModule } from '../finance-templates/finance-templates.module';
+import { AccountingTemplatesModule } from '../finance-templates/accounting-templates.module';
 
 @NgModule({
 	imports: [
@@ -46,7 +46,7 @@ import { FinanceTemplatesModule } from '../finance-templates/finance-templates.m
 		SettingsRoutingModule,
 		SharedModule,
 		EmailTemplatesModule,
-		FinanceTemplatesModule,
+		AccountingTemplatesModule,
 		DangerZoneMutationModule
 	],
 	declarations: [
