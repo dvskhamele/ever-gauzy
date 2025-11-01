@@ -5823,8 +5823,8 @@
 			"DELETE_USER_FROM_ORGANIZATION": "'{{ username }}' set as inactive.",
 			"DATA_ERROR": "{{ error }}",
 			"EDIT_ORGANIZATIONS_PROJECTS": {
-				"ADD_PROJECT": "Project '{{ name }}' was saved",
-				"REMOVE_PROJECT": "Project '{{ name }}' was removed",
+				"ADD_PROJECT": "Class/Subject/Course '{{ name }}' was saved",
+				"REMOVE_PROJECT": "Class/Subject/Course '{{ name }}' was removed",
 				"INVALID_PROJECT_NAME": "Please fill in the name of your project",
 				"VISIBILITY": "Now project is {{ name }} ",
 				"SYNC_REPOSITORY": "Repository '{{ repository }}' sync with '{{ project }}'",
