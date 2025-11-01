@@ -81,4 +81,4 @@ import {
 	],
 	providers: [OrganizationEmploymentTypesService]
 })
-export class OrganizationsModule {}
+export class SchoolsModule {}

@@ -57,4 +57,4 @@ import { ProjectListComponent } from './components/project-list/list.component';
 	],
 	providers: []
 })
-export class ProjectsModule {}
+export class CoursesModule {}

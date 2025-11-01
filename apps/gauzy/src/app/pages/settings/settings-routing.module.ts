@@ -44,10 +44,10 @@ const routes: Routes = [
 					import('../email-templates/email-templates.module').then((m) => m.EmailTemplatesModule)
 			},
 			{
-				path: 'accounting-templates',
+				path: 'finance-templates',
 				loadChildren: () =>
-					import('../accounting-templates/accounting-templates.module').then(
-						(m) => m.AccountingTemplatesModule
+					import('../finance-templates/finance-templates.module').then(
+						(m) => m.FinanceTemplatesModule
 					)
 			},
 			{

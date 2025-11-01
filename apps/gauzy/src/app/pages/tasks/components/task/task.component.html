@@ -4,13 +4,13 @@
 			<h4>
 				<ngx-header-title [allowEmployee]="false">
 					<ng-container *ngIf="isTasksPage()">
-						{{ 'TASKS_PAGE.HEADER' | translate }}
+						{{ 'ASSIGNMENTS_PAGE.HEADER' | translate }}
 					</ng-container>
 					<ng-container *ngIf="isMyTasksPage()">
-						{{ 'TASKS_PAGE.MY_TASK_HEADER' | translate }}
+						{{ 'ASSIGNMENTS_PAGE.MY_ASSIGNMENT_HEADER' | translate }}
 					</ng-container>
 					<ng-container *ngIf="isTeamTaskPage()">
-						{{ 'TASKS_PAGE.TEAM_TASKS_HEADER' | translate }}
+						{{ 'ASSIGNMENTS_PAGE.TEAM_ASSIGNMENTS_HEADER' | translate }}
 					</ng-container>
 				</ngx-header-title>
 			</h4>

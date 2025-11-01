@@ -3,7 +3,7 @@
 		<div class="body-header">
 			<h4>
 				<ngx-header-title>
-					{{ 'DASHBOARD_PAGE.EMPLOYEE_STATISTICS' | translate }}
+					{{ 'DASHBOARD_PAGE.FINANCE.SCHOOL_FINANCE' | translate }}
 				</ngx-header-title>
 			</h4>
 			<ng-container *ngIf="selectedDateRange?.startDate && selectedDateRange?.endDate">
@@ -15,12 +15,12 @@
 				</ngx-date-range-title>
 			</ng-container>
 		</div>
-		<div class="organization-employee-header">
+		<div class="organization-finance-header">
 			<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
 				<nb-card-body>
 					<ga-single-statistic
 						[color]="'var(--color-info-default)'"
-						[title]="'DASHBOARD_PAGE.TITLE.TOTAL_INCOME' | translate"
+						[title]="'DASHBOARD_PAGE.FINANCE.TOTAL_TUITION_FEES' | translate"
 						[value]="
 							aggregatedEmployeeStatistics?.total?.income || 0
 								| currency : organization?.currency
@@ -33,7 +33,7 @@
 				<nb-card-body>
 					<ga-single-statistic
 						[color]="'var(--color-danger-default)'"
-						[title]="'DASHBOARD_PAGE.TITLE.TOTAL_EXPENSES' | translate"
+						[title]="'DASHBOARD_PAGE.FINANCE.TOTAL_EXPENSES' | translate"
 						[value]="
 							aggregatedEmployeeStatistics?.total?.expense || 0
 								| currency : organization?.currency
@@ -50,7 +50,7 @@
 								? 'var(--color-warning-default)'
 								: '#ff7b00'
 						"
-						[title]="'DASHBOARD_PAGE.TITLE.PROFIT' | translate"
+						[title]="'DASHBOARD_PAGE.FINANCE.TOTAL_REVENUE' | translate"
 						[value]="
 							aggregatedEmployeeStatistics?.total?.profit || 0
 								| currency : organization?.currency
@@ -63,7 +63,7 @@
 				<nb-card-body>
 					<ga-single-statistic
 						[color]="'#089c17'"
-						[title]="'DASHBOARD_PAGE.TITLE.TOTAL_BONUS' | translate"
+						[title]="'DASHBOARD_PAGE.FINANCE.TOTAL_PAYMENTS' | translate"
 						[value]="
 							aggregatedEmployeeStatistics?.total?.bonus || 0
 								| currency : organization?.currency
@@ -77,7 +77,7 @@
 		<div class="cash-flow-report">
 			<nb-card [nbSpinner]="loading" nbSpinnerStatus="primary">
 				<nb-card-header>
-					{{ 'DASHBOARD_PAGE.CHARTS.CASH_FLOW' | translate }}
+					{{ 'DASHBOARD_PAGE.FINANCE.CASH_FLOW' | translate }}
 				</nb-card-header>
 				<nb-card-body class="chart">
 					<ngx-line-chart [data]="charts"></ngx-line-chart>
@@ -91,19 +91,19 @@
 				<div class="block-info">
 					<div class="row">
 						<div class="col">
-							{{ 'DASHBOARD_PAGE.DEVELOPER.EMPLOYEES' | translate }}
+							{{ 'DASHBOARD_PAGE.FINANCE.STUDENTS' | translate }}
 						</div>
 						<div class="col">
-							{{ 'DASHBOARD_PAGE.DEVELOPER.TOTAL_INCOME' | translate }}
+							{{ 'DASHBOARD_PAGE.FINANCE.TOTAL_TUITION_FEES' | translate }}
 						</div>
 						<div class="col">
-							{{ 'DASHBOARD_PAGE.DEVELOPER.TOTAL_EXPENSES' | translate }}
+							{{ 'DASHBOARD_PAGE.FINANCE.TOTAL_EXPENSES' | translate }}
 						</div>
 						<div class="col">
-							{{ 'DASHBOARD_PAGE.DEVELOPER.PROFIT' | translate }}
+							{{ 'DASHBOARD_PAGE.FINANCE.TOTAL_REVENUE' | translate }}
 						</div>
 						<div *ngIf="organization?.bonusType" class="col">
-							{{ 'DASHBOARD_PAGE.DEVELOPER.BONUS' | translate }}
+							{{ 'DASHBOARD_PAGE.FINANCE.TOTAL_PAYMENTS' | translate }}
 						</div>
 					</div>
 				</div>

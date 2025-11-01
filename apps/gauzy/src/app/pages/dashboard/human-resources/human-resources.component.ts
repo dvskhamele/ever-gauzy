@@ -206,7 +206,7 @@ export class HumanResourcesComponent implements OnInit, OnDestroy {
 	 *
 	 */
 	navigateToAccounting() {
-		this.router.navigate(['/pages/dashboard/accounting']);
+		this.router.navigate(['/pages/dashboard/finance']);
 	}
 
 	/**

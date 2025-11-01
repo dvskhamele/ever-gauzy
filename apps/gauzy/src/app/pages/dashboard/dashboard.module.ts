@@ -46,7 +46,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DataEntryShortcutsComponent } from './data-entry-shortcuts/data-entry-shortcuts.component';
 import { HumanResourcesComponent } from './human-resources/human-resources.component';
-import { AccountingComponent } from './accounting/accounting.component';
+import { FinanceComponent } from './finance/finance.component';
 import { ProjectManagementComponent } from './project-management/project-management.component';
 import { ProjectManagementDetailsComponent } from './project-management/project-management-details/project-management-details.component';
 import { TimeTrackingComponent } from './time-tracking/time-tracking.component';
@@ -92,7 +92,7 @@ const THIRD_PARTY_MODULES = [
 const COMPONENTS = [
 	DashboardComponent,
 	DataEntryShortcutsComponent,
-	AccountingComponent,
+	FinanceComponent,
 	HumanResourcesComponent,
 	ProjectManagementComponent,
 	ProjectManagementDetailsComponent,

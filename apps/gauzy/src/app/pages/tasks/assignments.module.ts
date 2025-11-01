@@ -104,4 +104,4 @@ import { SprintTaskComponent } from './components/task/tasks-layouts/tasks-sprin
 		TaskNumberFieldModule
 	]
 })
-export class TasksModule {}
+export class AssignmentsModule {}

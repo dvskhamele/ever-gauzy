@@ -4,7 +4,7 @@
 			<div class="card-header-title">
 				<h4>
 					<ngx-header-title [allowEmployee]="false">
-						{{ 'EMPLOYEES_PAGE.HEADER' | translate }}
+						{{ 'USERS_PAGE.HEADER' | translate }}
 					</ngx-header-title>
 				</h4>
 			</div>
@@ -13,7 +13,7 @@
 					<ng-template [ngxPermissionsOnly]="[PermissionsEnum.ORG_EMPLOYEES_VIEW]">
 						<ng-template [ngxPermissionsOnly]="[PermissionsEnum.ORG_INVITE_VIEW]">
 							<ng-template [ngIf]="organization?.invitesAllowed">
-								<button nbButton status="primary" [routerLink]="'/pages/employees/invites'">
+								<button nbButton status="primary" [routerLink]="'/pages/users/invites'">
 									{{ 'BUTTONS.MANAGE_INVITES' | translate }}
 								</button>
 							</ng-template>

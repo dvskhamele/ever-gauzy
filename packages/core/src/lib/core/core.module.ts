@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2020 Ever Co. LTD
+// Copyright (c) 2019-2025 School Gauzy
 
 // Modified code from https://github.com/xmlking/ngx-starter-kit.
 // Originally MIT Licensed

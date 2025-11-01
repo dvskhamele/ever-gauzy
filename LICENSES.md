@@ -1,6 +1,6 @@
 # License
 
-Copyright © 2019-present, Ever Co. LTD. All rights reserved.
+Copyright © 2019-present, School Gauzy. All rights reserved.
 
 This document represents official information about our licensing for Ever Gauzy Platform, make sure you read and understand it before starting to use software and source code.
 
@@ -9,9 +9,9 @@ This document represents official information about our licensing for Ever Gauzy
 
 Ever Gauzy software is available under an Open Source License ("Community Edition"). It is suitable if your business can comply with the requirements of corresponding open-source licenses, see more information below (e.g. requirements to release your modifications under the same open-source licenses for the benefit of our community).
 
-Alternatively, commercial versions of the Ever Gauzy software must be used in accordance with the terms and conditions of the separate written license agreement between you and Ever Co. LTD. With a commercial license, your source code (including your changes) is kept proprietary. You can purchase a commercial license at <https://gauzy.co/pricing>.
+This is an open-source school management system licensed under AGPL-3.0. For more information about licensing, visit https://school.gauzy.com/licensing.
 
-In addition, Ever Co. LTD holds copyright and/or sufficient licenses to all components of the Ever Gauzy Platform and therefore can grant, at its sole discretion, the ability for companies, individuals, or organizations to create proprietary modules that may be dynamically linked at runtime with the portions of Gauzy Platform which fall under our copyright/license umbrella.
+This is an open-source school management system licensed under AGPL-3.0 for educational institutions.
 
 We support the open-source community. If you're building awesome non-profit/open-source projects, we're happy to help and will provide (subject to [acceptance criteria](https://github.com/signimus/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects)) Ever Gauzy Enterprise edition license and free hosting option! Feel free to contact us at <mailto:ever@ever.co> to make a request. More details are explained in our [Wiki](https://github.com/signimus/ever-gauzy/wiki/Free-license-and-hosting-for-Non-profit-and-Open-Source-projects).
 
@@ -55,8 +55,7 @@ Please see [CREDITS.md](CREDITS.md) files for a list of libraries and software i
 
 ## Trademarks
 
-**Ever**® is a registered trademark of [Ever Co. LTD](https://ever.co).  
-**Gauzy**™ is a trademark of [Ever Co. LTD](https://ever.co).
+School Gauzy is an open-source school management platform for educational institutions.
 
 The trademarks and logos may only be used with the written permission of Ever Co. LTD. and may not be used to promote or otherwise market competitive products or services. If you wish to use these trademarks and logos you should contact our licensing department at <mailto:legal@ever.co> to determine the necessary steps you must take.
 

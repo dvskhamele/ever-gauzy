@@ -3,7 +3,7 @@
 		<div class="col-auto">
 			<h4>
 				<ngx-header-title [allowEmployee]="false">
-					{{ (isEstimate ? 'INVOICES_PAGE.ESTIMATES.HEADER' : 'INVOICES_PAGE.HEADER') | translate }}
+					{{ (isEstimate ? 'BILLING_PAGE.FEES.HEADER' : 'BILLING_PAGE.HEADER') | translate }}
 				</ngx-header-title>
 			</h4>
 			<ngx-date-range-title [format]="'dddd, LL'"></ngx-date-range-title>
@@ -32,7 +32,7 @@
 							<span class="transition" [ngClass]="{ show: !disableButton, 'show-button': disableButton }">
 								<button nbButton status="success" (click)="add()" size="small">
 									<nb-icon icon="plus-outline"> </nb-icon>
-									{{ 'BUTTONS.ADD' | translate }}
+									{{ 'BUTTONS.ADD_FEE' | translate }}
 								</button>
 							</span>
 							<ng-container *ngTemplateOutlet="actionButtons"></ng-container>
@@ -45,7 +45,7 @@
 		<nb-tabset (changeTab)="onChangeTab($event)">
 			<nb-tab
 				class="remove-scroll"
-				[tabTitle]="'INVOICES_PAGE.BROWSE' | translate | titlecase"
+				[tabTitle]="'BILLING_PAGE.BROWSE' | translate | titlecase"
 				[tabId]="invoiceTabsEnum.ACTIONS"
 			>
 				<ng-container *ngIf="(nbTab$ | async) === invoiceTabsEnum.ACTIONS">
@@ -68,11 +68,8 @@
 						<nb-accordion class="mb-3">
 							<nb-accordion-item collapsed="false">
 								<nb-accordion-item-header>
-									{{
-										(isEstimate ? 'INVOICES_PAGE.ESTIMATES.HEADER' : 'INVOICES_PAGE.HEADER')
-											| translate
-									}}
-									{{ 'INVOICES_PAGE.SEARCH' | translate | lowercase }}
+									{{ (isEstimate ? 'FEES_PAGE.FEES.HEADER' : 'FEES_PAGE.HEADER') | translate }}
+									{{ 'FEES_PAGE.SEARCH' | translate | lowercase }}
 								</nb-accordion-item-header>
 								<nb-accordion-item-body>
 									<form [formGroup]="searchForm" (ngSubmit)="search()">
@@ -83,8 +80,8 @@
 														<span>
 															{{
 																(isEstimate
-																	? 'INVOICES_PAGE.ESTIMATE_NUMBER'
-																	: 'INVOICES_PAGE.INVOICE_NUMBER'
+																	? 'FEES_PAGE.ESTIMATE_NUMBER'
+																	: 'FEES_PAGE.FEE_NUMBER'
 																) | translate
 															}}
 														</span>
@@ -94,8 +91,8 @@
 														nbInput
 														[placeholder]="
 															(!isEstimate
-																? 'INVOICES_PAGE.INVOICE_NUMBER'
-																: 'INVOICES_PAGE.ESTIMATE_NUMBER'
+																? 'FEES_PAGE.FEE_NUMBER'
+																: 'FEES_PAGE.ESTIMATE_NUMBER'
 															) | translate
 														"
 														formControlName="invoiceNumber"
@@ -110,8 +107,8 @@
 														<span>
 															{{
 																(!isEstimate
-																	? 'INVOICES_PAGE.INVOICE_DATE'
-																	: 'INVOICES_PAGE.ESTIMATE_DATE'
+																	? 'FEES_PAGE.FEE_DATE'
+																	: 'FEES_PAGE.ESTIMATE_DATE'
 																) | translate
 															}}
 														</span>
@@ -123,8 +120,8 @@
 															nbInput
 															[placeholder]="
 																(!isEstimate
-																	? 'INVOICES_PAGE.INVOICE_DATE'
-																	: 'INVOICES_PAGE.ESTIMATE_DATE'
+																	? 'FEES_PAGE.FEE_DATE'
+																	: 'FEES_PAGE.ESTIMATE_DATE'
 																) | translate
 															"
 															[nbDatepicker]="invoiceDatePicker"
@@ -141,12 +138,12 @@
 											<div class="col-sm-3">
 												<div class="form-group">
 													<label for="inputDueDate" class="label">{{
-														'INVOICES_PAGE.DUE_DATE' | translate
+														'FEES_PAGE.DUE_DATE' | translate
 													}}</label>
 													<div class="input-icon">
 														<input
 															nbInput
-															[placeholder]="'INVOICES_PAGE.DUE_DATE' | translate"
+															[placeholder]="'FEES_PAGE.DUE_DATE' | translate"
 															[nbDatepicker]="dueDatePicker"
 															formControlName="dueDate"
 															id="inputDueDate"
@@ -163,7 +160,7 @@
 											<div class="col-sm-3">
 												<div class="form-group">
 													<label for="inputOrganizationContact" class="label">
-														<span>{{ 'INVOICES_PAGE.CONTACT' | translate }}</span>
+														<span>{{ 'FEES_PAGE.CONTACT' | translate }}</span>
 													</label>
 													<ga-contact-select
 														[clearable]="true"
@@ -175,12 +172,12 @@
 											<div class="col-sm-2">
 												<div class="form-group">
 													<label for="inputTotalValue" class="label">
-														{{ 'INVOICES_PAGE.TOTAL_VALUE' | translate }}
+														{{ 'FEES_PAGE.TOTAL_VALUE' | translate }}
 													</label>
 													<input
 														type="number"
 														nbInput
-														[placeholder]="'INVOICES_PAGE.TOTAL_VALUE' | translate"
+														[placeholder]="'FEES_PAGE.TOTAL_VALUE' | translate"
 														formControlName="totalValue"
 														id="inputTotalValue"
 														fullWidth

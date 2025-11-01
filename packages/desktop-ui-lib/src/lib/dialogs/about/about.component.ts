@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
 		name: 'gauzy-dev',
 		version: 'dev',
 		iconPath: null,
-		companyName: 'Ever Co. LTD.'
+		companyName: 'School Gauzy'
 	};
 	constructor(
 		private readonly _electronService: ElectronService,

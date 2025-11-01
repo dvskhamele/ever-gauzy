@@ -21,7 +21,7 @@ export const setupSwagger = async (
 		scalarPath = 'docs',
 		enableScalar = true,
 		contact = {
-			name: 'Ever Co. LTD',
+			name: 'School Gauzy',
 			url: 'https://ever.co',
 			email: 'support@ever.co'
 		},

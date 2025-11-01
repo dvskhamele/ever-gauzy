@@ -21,4 +21,4 @@ import { AccountingTemplatesComponent } from './accounting-templates.component';
 	declarations: [AccountingTemplatesComponent],
 	providers: []
 })
-export class AccountingTemplatesModule {}
+export class FinanceTemplatesModule {}

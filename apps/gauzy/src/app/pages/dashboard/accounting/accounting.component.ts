@@ -21,16 +21,16 @@ import { ALL_EMPLOYEES_SELECTED, ChartUtil, IChartData } from '@gauzy/ui-core/sh
 
 @UntilDestroy({ checkProperties: true })
 @Component({
-    selector: 'ga-dashboard-accounting',
-    templateUrl: './accounting.component.html',
+    selector: 'ga-dashboard-finance',
+    templateUrl: './finance.component.html',
     styleUrls: [
         '../../organizations/edit-organization/edit-organization.component.scss',
-        './accounting.component.scss'
+        './finance.component.scss'
     ],
     providers: [CurrencyPipe],
     standalone: false
 })
-export class AccountingComponent extends TranslationBaseComponent implements AfterViewInit, OnInit, OnDestroy {
+export class FinanceComponent extends TranslationBaseComponent implements AfterViewInit, OnInit, OnDestroy {
 	public aggregatedEmployeeStatistics: IAggregatedEmployeeStatistic;
 	public selectedDateRange: IDateRangePicker;
 	public organization: IOrganization;
@@ -112,12 +112,12 @@ export class AccountingComponent extends TranslationBaseComponent implements Aft
 	}
 
 	/**
-	 * Navigates to the employee statistics page in the HR dashboard.
+	 * Navigates to the staff statistics page in the School dashboard.
 	 * Uses Angular Router to navigate to the specified route.
 	 */
 	navigateToEmployeeStatistics(): void {
-		// Navigate to the '/pages/dashboard/hr' route
-		this.router.navigate(['/pages/dashboard/hr']);
+		// Navigate to the '/pages/dashboard/staff-management' route
+		this.router.navigate(['/pages/dashboard/staff-management']);
 	}
 
 	/**
@@ -163,9 +163,9 @@ export class AccountingComponent extends TranslationBaseComponent implements Aft
 	}
 
 	/**
-	 * Generates chart data based on aggregated employee statistics.
+	 * Generates chart data based on aggregated school finance statistics.
 	 * Uses common options for chart datasets and updates the component's 'charts' property.
-	 * Charts include income, expenses, profit, and bonus data.
+	 * Charts include tuition fees, expenses, revenue, and payments data.
 	 */
 	public generateCharts() {
 		// Check if aggregatedEmployeeStatistics is empty
@@ -195,28 +195,28 @@ export class AccountingComponent extends TranslationBaseComponent implements Aft
 			labels,
 			datasets: [
 				{
-					label: this.getTranslation('INCOME_PAGE.INCOME'),
+					label: this.getTranslation('DASHBOARD_PAGE.FINANCE.TUITION_FEES'),
 					data: income,
 					borderColor: ChartUtil.CHART_COLORS.blue,
 					backgroundColor: ChartUtil.transparentize(ChartUtil.CHART_COLORS.blue, 1),
 					...commonOptions
 				},
 				{
-					label: this.getTranslation('DASHBOARD_PAGE.PROFIT_HISTORY.EXPENSES'),
+					label: this.getTranslation('DASHBOARD_PAGE.FINANCE.EXPENSES'),
 					data: expense,
 					borderColor: ChartUtil.CHART_COLORS.red,
 					backgroundColor: ChartUtil.transparentize(ChartUtil.CHART_COLORS.red, 1),
 					...commonOptions
 				},
 				{
-					label: this.getTranslation('DASHBOARD_PAGE.CHARTS.PROFIT'),
+					label: this.getTranslation('DASHBOARD_PAGE.FINANCE.REVENUE'),
 					data: profit,
 					borderColor: ChartUtil.CHART_COLORS.yellow,
 					backgroundColor: ChartUtil.transparentize(ChartUtil.CHART_COLORS.yellow, 1),
 					...commonOptions
 				},
 				{
-					label: this.getTranslation('DASHBOARD_PAGE.CHARTS.BONUS'),
+					label: this.getTranslation('DASHBOARD_PAGE.FINANCE.PAYMENTS'),
 					data: bonus,
 					borderColor: ChartUtil.CHART_COLORS.green,
 					backgroundColor: ChartUtil.transparentize(ChartUtil.CHART_COLORS.green, 1),

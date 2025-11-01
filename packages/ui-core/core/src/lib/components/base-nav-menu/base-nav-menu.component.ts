@@ -123,88 +123,88 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 				items: this._favoriteItems
 			},
 			{
-				id: 'accounting',
-				title: 'Accounting',
+				id: 'finance',
+				title: 'Finance',
 				icon: 'far fa-address-card',
 				data: {
-					translationKey: 'MENU.ACCOUNTING'
+					translationKey: 'MENU.FINANCE'
 				},
 				items: [
 					{
-						id: 'accounting-estimates',
-						title: 'Estimates',
+						id: 'finance-admission-applications',
+						title: 'Admission Applications',
 						icon: 'far fa-file',
-						link: '/pages/accounting/invoices/estimates',
+						link: '/pages/finance/admissions',
 						data: {
-							translationKey: 'MENU.ESTIMATES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ESTIMATES_VIEW],
-							featureKey: FeatureEnum.FEATURE_ESTIMATE,
+							translationKey: 'MENU.ADMISSION_APPLICATIONS',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.STUDENT_ADMISSION_VIEW],
+							featureKey: FeatureEnum.FEATURE_ADMISSION_APPLICATION,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ESTIMATES_EDIT
+								PermissionsEnum.STUDENT_ADMISSION_EDIT
 							) && {
-								add: '/pages/accounting/invoices/estimates/add'
+								add: '/pages/finance/admissions/add'
 							})
 						}
 					},
 					{
-						id: 'accounting-estimates-received',
-						title: 'Estimates Received',
+						id: 'finance-admission-applications-received',
+						title: 'Applications Received',
 						icon: 'fas fa-file-invoice',
-						link: '/pages/accounting/invoices/received-estimates',
+						link: '/pages/finance/admissions/received',
 						data: {
-							translationKey: 'MENU.ESTIMATES_RECEIVED',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ESTIMATES_VIEW],
-							featureKey: FeatureEnum.FEATURE_ESTIMATE_RECEIVED
+							translationKey: 'MENU.APPLICATIONS_RECEIVED',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.STUDENT_ADMISSION_VIEW],
+							featureKey: FeatureEnum.FEATURE_ADMISSION_APPLICATION_RECEIVED
 						}
 					},
 					{
-						id: 'accounting-invoices',
-						title: 'Invoices',
+						id: 'finance-billing',
+						title: 'Billing',
 						icon: 'far fa-file-alt',
-						link: '/pages/accounting/invoices',
+						link: '/pages/finance/billing',
 						pathMatch: 'full',
 						data: {
-							translationKey: 'MENU.INVOICES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.INVOICES_VIEW],
-							featureKey: FeatureEnum.FEATURE_INVOICE,
+							translationKey: 'MENU.BILLING',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.FINANCE_VIEW],
+							featureKey: FeatureEnum.FEATURE_BILLING,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.INVOICES_EDIT
+								PermissionsEnum.FINANCE_EDIT
 							) && {
-								add: '/pages/accounting/invoices/add'
+								add: '/pages/finance/billing/add'
 							})
 						}
 					},
 					{
-						id: 'accounting-invoices-recurring',
-						title: 'Invoices Recurring',
+						id: 'finance-billing-recurring',
+						title: 'Recurring Billing',
 						icon: 'fas fa-exchange-alt fa-rotate-90',
-						link: '/pages/accounting/invoices/recurring',
+						link: '/pages/finance/billing/recurring',
 						pathMatch: 'prefix',
 						data: {
-							translationKey: 'MENU.RECURRING_INVOICES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.INVOICES_VIEW],
-							featureKey: FeatureEnum.FEATURE_INVOICE_RECURRING
+							translationKey: 'MENU.RECURRING_BILLING',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.FINANCE_VIEW],
+							featureKey: FeatureEnum.FEATURE_BILLING_RECURRING
 						}
 					},
 					{
-						id: 'accounting-invoices-received',
-						title: 'Invoices Received',
+						id: 'finance-billing-received',
+						title: 'Billing Received',
 						icon: 'fas fa-file-invoice-dollar',
-						link: '/pages/accounting/invoices/received-invoices',
+						link: '/pages/finance/billing/received',
 						pathMatch: 'prefix',
 						data: {
-							translationKey: 'MENU.INVOICES_RECEIVED',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.INVOICES_VIEW],
-							featureKey: FeatureEnum.FEATURE_INVOICE_RECEIVED
+							translationKey: 'MENU.BILLING_RECEIVED',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.FINANCE_VIEW],
+							featureKey: FeatureEnum.FEATURE_BILLING_RECEIVED
 						}
 					},
 					{
-						id: 'accounting-income',
+						id: 'finance-income',
 						title: 'Income',
 						icon: 'fas fa-plus-circle',
-						link: '/pages/accounting/income',
+						link: '/pages/finance/income',
 						data: {
 							translationKey: 'MENU.INCOME',
 							permissionKeys: [PermissionsEnum.ORG_INCOMES_VIEW],
@@ -213,15 +213,15 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_INCOMES_EDIT
 							) && {
-								add: '/pages/accounting/income?openAddDialog=true'
+								add: '/pages/finance/income?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'accounting-expenses',
+						id: 'finance-expenses',
 						title: 'Expenses',
 						icon: 'fas fa-minus-circle',
-						link: '/pages/accounting/expenses',
+						link: '/pages/finance/expenses',
 						data: {
 							translationKey: 'MENU.EXPENSES',
 							permissionKeys: [PermissionsEnum.ORG_EXPENSES_VIEW],
@@ -230,15 +230,15 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_EXPENSES_EDIT
 							) && {
-								add: '/pages/accounting/expenses?openAddDialog=true'
+								add: '/pages/finance/expenses?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'accounting-expense-recurring',
-						title: 'Expense Recurring',
+						id: 'finance-expense-recurring',
+						title: 'Recurring Expenses',
 						icon: 'fas fa-exchange-alt fa-rotate-90',
-						link: '/pages/accounting/expense-recurring',
+						link: '/pages/finance/expense-recurring',
 						data: {
 							translationKey: 'ORGANIZATIONS_PAGE.EXPENSE_RECURRING',
 							permissionKeys: [PermissionsEnum.ORG_EXPENSES_VIEW],
@@ -247,15 +247,15 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_EXPENSES_EDIT
 							) && {
-								add: '/pages/accounting/expense-recurring?openAddDialog=true'
+								add: '/pages/finance/expense-recurring?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'accounting-payments',
+						id: 'finance-payments',
 						title: 'Payments',
 						icon: 'fas fa-cash-register',
-						link: '/pages/accounting/payments',
+						link: '/pages/finance/payments',
 						data: {
 							translationKey: 'MENU.PAYMENTS',
 							permissionKeys: [PermissionsEnum.ORG_PAYMENT_VIEW],
@@ -264,89 +264,89 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_PAYMENT_ADD_EDIT
 							) && {
-								add: '/pages/accounting/payments?openAddDialog=true'
+								add: '/pages/finance/payments?openAddDialog=true'
 							})
 						}
 					}
 				]
 			},
 			{
-				id: 'sales',
-				title: 'Sales',
+				id: 'admissions',
+				title: 'Admissions',
 				icon: 'fas fa-chart-line',
-				link: '/pages/sales',
+				link: '/pages/admissions',
 				data: {
-					translationKey: 'MENU.SALES',
-					permissionKeys: [PermissionsEnum.ORG_PROPOSALS_VIEW]
+					translationKey: 'MENU.ADMISSIONS',
+					permissionKeys: [PermissionsEnum.STUDENT_ADMISSION_VIEW]
 				},
 				items: [
 					{
-						id: 'sales-proposals',
-						title: 'Proposals',
+						id: 'admissions-applications',
+						title: 'Applications',
 						icon: 'fas fa-paper-plane',
-						link: '/pages/sales/proposals',
+						link: '/pages/admissions/applications',
 						data: {
-							translationKey: 'MENU.PROPOSALS',
-							permissionKeys: [PermissionsEnum.ORG_PROPOSALS_VIEW],
-							featureKey: FeatureEnum.FEATURE_PROPOSAL,
+							translationKey: 'MENU.APPLICATIONS',
+							permissionKeys: [PermissionsEnum.STUDENT_ADMISSION_VIEW],
+							featureKey: FeatureEnum.FEATURE_ADMISSION_APPLICATION,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_PROPOSALS_EDIT
+								PermissionsEnum.STUDENT_ADMISSION_EDIT
 							) && {
-								add: '/pages/sales/proposals/register'
+								add: '/pages/admissions/applications/register'
 							})
 						}
 					},
 					{
-						id: 'sales-estimates',
-						title: 'Estimates',
+						id: 'admissions-acceptance',
+						title: 'Acceptance Letters',
 						icon: 'far fa-file',
-						link: '/pages/sales/invoices/estimates',
+						link: '/pages/admissions/acceptance',
 						data: {
-							translationKey: 'MENU.ESTIMATES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ESTIMATES_VIEW],
-							featureKey: FeatureEnum.FEATURE_PROPOSAL,
+							translationKey: 'MENU.ACCEPTANCE_LETTERS',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.STUDENT_ADMISSION_VIEW],
+							featureKey: FeatureEnum.FEATURE_ADMISSION_APPLICATION,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ESTIMATES_EDIT
+								PermissionsEnum.STUDENT_ADMISSION_EDIT
 							) && {
-								add: '/pages/sales/invoices/estimates/add'
+								add: '/pages/admissions/acceptance/add'
 							})
 						}
 					},
 					{
-						id: 'sales-invoices',
-						title: 'Invoices',
+						id: 'admissions-billing',
+						title: 'Billing',
 						icon: 'far fa-file-alt',
-						link: '/pages/sales/invoices',
+						link: '/pages/admissions/billing',
 						data: {
-							translationKey: 'MENU.INVOICES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.INVOICES_VIEW],
-							featureKey: FeatureEnum.FEATURE_INVOICE,
+							translationKey: 'MENU.BILLING',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.FINANCE_VIEW],
+							featureKey: FeatureEnum.FEATURE_BILLING,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.INVOICES_EDIT
+								PermissionsEnum.FINANCE_EDIT
 							) && {
-								add: '/pages/sales/invoices/add'
+								add: '/pages/admissions/billing/add'
 							})
 						}
 					},
 					{
-						id: 'sales-invoices-recurring',
-						title: 'Invoices Recurring',
+						id: 'admissions-recurring-billing',
+						title: 'Recurring Billing',
 						icon: 'fas fa-exchange-alt fa-rotate-90',
-						link: '/pages/sales/invoices/recurring',
+						link: '/pages/admissions/billing/recurring',
 						data: {
-							translationKey: 'MENU.RECURRING_INVOICES',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.INVOICES_VIEW],
-							featureKey: FeatureEnum.FEATURE_INVOICE_RECURRING
+							translationKey: 'MENU.RECURRING_BILLING',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.FINANCE_VIEW],
+							featureKey: FeatureEnum.FEATURE_BILLING_RECURRING
 						}
 					},
 					{
-						id: 'sales-payments',
+						id: 'admissions-payments',
 						title: 'Payments',
 						icon: 'fas fa-cash-register',
-						link: '/pages/sales/payments',
+						link: '/pages/admissions/payments',
 						data: {
 							translationKey: 'MENU.PAYMENTS',
 							permissionKeys: [PermissionsEnum.ORG_PAYMENT_VIEW],
@@ -355,434 +355,422 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_PAYMENT_ADD_EDIT
 							) && {
-								add: '/pages/sales/payments?openAddDialog=true'
+								add: '/pages/admissions/payments?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'sales-pipelines',
-						title: 'Pipelines',
+						id: 'admissions-processes',
+						title: 'Admission Processes',
 						icon: 'fas fa-filter',
-						link: '/pages/sales/pipelines',
+						link: '/pages/admissions/processes',
 						data: {
-							translationKey: 'MENU.PIPELINES',
-							permissionKeys: [PermissionsEnum.VIEW_SALES_PIPELINES],
-							featureKey: FeatureEnum.FEATURE_PIPELINE,
+							translationKey: 'MENU.ADMISSION_PROCESSES',
+							permissionKeys: [PermissionsEnum.VIEW_ADMISSION_PROCESSES],
+							featureKey: FeatureEnum.FEATURE_ADMISSION_PROCESS,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.EDIT_SALES_PIPELINES
+								PermissionsEnum.EDIT_ADMISSION_PROCESSES
 							) && {
-								add: '/pages/sales/pipelines?openAddDialog=true'
+								add: '/pages/admissions/processes?openAddDialog=true'
 							})
 						}
 					}
 				]
 			},
 			{
-				id: 'tasks',
-				title: 'Tasks',
+				id: 'assignments',
+				title: 'Assignments',
 				icon: 'fas fa-tasks',
-				link: '/pages/tasks',
+				link: '/pages/assignments',
 				data: {
-					translationKey: 'MENU.TASKS'
+					translationKey: 'MENU.ASSIGNMENTS'
 				},
 				items: [
 					{
-						id: 'tasks-dashboard',
+						id: 'assignments-dashboard',
 						title: 'Dashboard',
 						icon: 'fas fa-th',
-						link: '/pages/tasks/dashboard',
+						link: '/pages/assignments/dashboard',
 						data: {
 							translationKey: 'MENU.DASHBOARD',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_TASK_VIEW],
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.COURSE_ASSIGNMENT_VIEW],
 							featureKey: FeatureEnum.FEATURE_DASHBOARD_TASK,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_TASK_ADD
+								PermissionsEnum.COURSE_ASSIGNMENT_ADD
 							) && {
-								add: '/pages/tasks/dashboard?openAddDialog=true'
+								add: '/pages/assignments/dashboard?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'tasks-team',
-						title: "Team's Tasks",
+						id: 'assignments-student',
+						title: "Student's Assignments",
 						icon: 'fas fa-user-friends',
-						link: '/pages/tasks/team',
+						link: '/pages/assignments/student',
 						data: {
-							translationKey: 'MENU.TEAM_TASKS',
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_TASK_VIEW],
-							featureKey: FeatureEnum.FEATURE_TEAM_TASK,
+							translationKey: 'MENU.STUDENT_ASSIGNMENTS',
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.COURSE_ASSIGNMENT_VIEW],
+							featureKey: FeatureEnum.FEATURE_STUDENT_ASSIGNMENT,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_TASK_ADD
+								PermissionsEnum.COURSE_ASSIGNMENT_ADD
 							) && {
-								add: '/pages/tasks/team?openAddDialog=true'
+								add: '/pages/assignments/student?openAddDialog=true'
 							})
 						}
 					}
 				]
 			},
 			{
-				id: 'jobs',
-				title: 'Jobs',
+				id: 'staff',
+				title: 'Staff',
 				icon: 'fas fa-briefcase',
-				link: '/pages/jobs',
+				link: '/pages/staff',
 				data: {
-					translationKey: 'MENU.JOBS',
-					featureKey: FeatureEnum.FEATURE_JOB
+					translationKey: 'MENU.STAFF',
+					featureKey: FeatureEnum.FEATURE_STAFF
 				},
 				items: [
 					{
-						id: 'jobs-employee',
-						title: 'Employee',
+						id: 'staff-teacher',
+						title: 'Teachers',
 						icon: 'fas fa-user-friends',
-						link: '/pages/jobs/employee',
+						link: '/pages/staff/teachers',
 						data: {
-							translationKey: 'MENU.EMPLOYEES',
-							permissionKeys: [PermissionsEnum.ORG_JOB_EMPLOYEE_VIEW]
+							translationKey: 'MENU.TEACHERS',
+							permissionKeys: [PermissionsEnum.STAFF_VIEW]
 						}
 					},
 					{
-						id: 'jobs-proposal-template',
-						title: 'Proposal Template',
+						id: 'staff-contract-template',
+						title: 'Contract Template',
 						icon: 'far fa-file-alt',
-						link: '/pages/jobs/proposal-template',
+						link: '/pages/staff/contract-template',
 						data: {
-							translationKey: 'MENU.PROPOSAL_TEMPLATE',
-							permissionKeys: [PermissionsEnum.ORG_PROPOSAL_TEMPLATES_VIEW],
+							translationKey: 'MENU.CONTRACT_TEMPLATE',
+							permissionKeys: [PermissionsEnum.STAFF_CONTRACT_TEMPLATES_VIEW],
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_PROPOSAL_TEMPLATES_EDIT
+								PermissionsEnum.STAFF_CONTRACT_TEMPLATES_EDIT
 							) && {
-								add: '/pages/jobs/proposal-template?openAddDialog=true'
+								add: '/pages/staff/contract-template?openAddDialog=true'
 							})
 						}
 					}
 				]
 			},
 			{
-				id: 'employees',
-				title: 'Employees',
+				id: 'users',
+				title: 'Users',
 				icon: 'fas fa-user-friends',
 				data: {
-					translationKey: 'MENU.EMPLOYEES'
+					translationKey: 'MENU.USERS'
 				},
 				items: [
 					{
-						id: 'employees-manage',
-						title: 'Manage',
+						id: 'users-teachers',
+						title: 'Teachers & Staff',
 						icon: 'fas fa-list',
-						link: '/pages/employees',
+						link: '/pages/users/teachers',
 						pathMatch: 'full',
 						data: {
 							translationKey: 'MENU.MANAGE',
-							permissionKeys: [PermissionsEnum.ORG_EMPLOYEES_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEES
+							permissionKeys: [PermissionsEnum.STAFF_VIEW],
+							featureKey: FeatureEnum.FEATURE_STAFF
 						}
 					},
 					{
-						id: 'employees-time-activity',
-						title: 'Time & Activity',
-						icon: 'fas fa-chart-line',
-						link: '/pages/employees/activity',
+						id: 'users-students',
+						title: 'Students',
+						icon: 'fas fa-graduation-cap',
+						link: '/pages/users/students',
 						pathMatch: 'prefix',
 						data: {
-							translationKey: 'MENU.TIME_ACTIVITY',
-							permissionKeys: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.TIME_TRACKER],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_TIME_ACTIVITY
+							translationKey: 'MENU.STUDENTS',
+							permissionKeys: [PermissionsEnum.STUDENT_VIEW],
+							featureKey: FeatureEnum.FEATURE_STUDENT
 						}
 					},
 					{
-						id: 'employees-timesheets',
-						title: 'Timesheets',
-						icon: 'far fa-clock',
-						link: '/pages/employees/timesheets',
+						id: 'users-parents',
+						title: 'Parents & Guardians',
+						icon: 'fas fa-users',
+						link: '/pages/users/parents',
 						pathMatch: 'prefix',
 						data: {
-							translationKey: 'MENU.TIMESHEETS',
-							permissionKeys: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.TIME_TRACKER],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_TIMESHEETS
+							translationKey: 'MENU.PARENTS',
+							featureKey: FeatureEnum.FEATURE_PARENT
 						}
 					},
 					{
-						id: 'employees-appointments',
-						title: 'Appointments',
-						icon: 'fas fa-calendar-week',
-						link: '/pages/employees/appointments',
-						pathMatch: 'prefix',
-						data: {
-							translationKey: 'MENU.APPOINTMENTS',
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_APPOINTMENT
-						}
-					},
-					{
-						id: 'employees-approvals',
+						id: 'users-approvals',
 						title: 'Approvals',
 						icon: 'fas fa-repeat',
-						link: '/pages/employees/approvals',
+						link: '/pages/users/approvals',
 						data: {
 							translationKey: 'MENU.APPROVALS',
 							permissionKeys: [PermissionsEnum.REQUEST_APPROVAL_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_APPROVAL,
+							featureKey: FeatureEnum.FEATURE_USER_APPROVAL,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.REQUEST_APPROVAL_EDIT
 							) && {
-								add: '/pages/employees/approvals?openAddDialog=true'
+								add: '/pages/users/approvals?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'employees-levels',
-						title: 'Employee Levels',
+						id: 'users-roles',
+						title: 'Teacher Levels',
 						icon: 'fas fa-chart-bar',
-						link: `/pages/employees/employee-level`,
+						link: `/pages/users/teacher-level`,
 						data: {
-							translationKey: 'MENU.EMPLOYEE_LEVEL',
+							translationKey: 'MENU.TEACHER_LEVEL',
 							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_LEVEL
+							featureKey: FeatureEnum.FEATURE_TEACHER_LEVEL
 						}
 					},
 					{
-						id: 'employees-positions',
+						id: 'users-positions',
 						title: 'Positions',
 						icon: 'fas fa-award',
-						link: `/pages/employees/positions`,
+						link: `/pages/users/positions`,
 						data: {
 							translationKey: 'MENU.POSITIONS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_POSITION
+							featureKey: FeatureEnum.FEATURE_USER_POSITION
 						}
 					},
 					{
-						id: 'employees-time-off',
-						title: 'Time Off',
+						id: 'users-leave',
+						title: 'Leave',
 						icon: 'far fa-times-circle',
-						link: '/pages/employees/time-off',
+						link: '/pages/users/leave',
 						data: {
-							translationKey: 'MENU.TIME_OFF',
+							translationKey: 'MENU.LEAVE',
 							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.TIME_OFF_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_TIMEOFF,
+							featureKey: FeatureEnum.FEATURE_USER_LEAVE,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.TIME_OFF_ADD
 							) && {
-								add: '/pages/employees/time-off?openAddDialog=true'
+								add: '/pages/users/leave?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'employees-recurring-expenses',
+						id: 'users-recurring-expenses',
 						title: 'Recurring Expenses',
 						icon: 'fas fa-exchange-alt fa-rotate-90',
-						link: '/pages/employees/recurring-expenses',
+						link: '/pages/users/recurring-expenses',
 						data: {
 							translationKey: 'MENU.RECURRING_EXPENSE',
 							permissionKeys: [PermissionsEnum.EMPLOYEE_EXPENSES_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_RECURRING_EXPENSE,
+							featureKey: FeatureEnum.FEATURE_USER_RECURRING_EXPENSE,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.EMPLOYEE_EXPENSES_EDIT
 							) && {
-								add: '/pages/employees/recurring-expenses?openAddDialog=true'
+								add: '/pages/users/recurring-expenses?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'employees-candidates',
-						title: 'Candidates',
+						id: 'users-applicants',
+						title: 'Applicants',
 						icon: 'fas fa-user-check',
-						link: '/pages/employees/candidates',
+						link: '/pages/users/applicants',
 						data: {
-							translationKey: 'MENU.CANDIDATES',
-							permissionKeys: [PermissionsEnum.ORG_CANDIDATES_VIEW],
-							featureKey: FeatureEnum.FEATURE_EMPLOYEE_CANDIDATE,
+							translationKey: 'MENU.APPLICANTS',
+							permissionKeys: [PermissionsEnum.STAFF_CANDIDATES_VIEW],
+							featureKey: FeatureEnum.FEATURE_USER_APPLICANT,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_CANDIDATES_EDIT
+								PermissionsEnum.STAFF_CANDIDATES_EDIT
 							) && {
-								add: '/pages/employees/candidates?openAddDialog=true'
+								add: '/pages/users/applicants?openAddDialog=true'
 							})
 						}
 					}
 				]
 			},
 			{
-				id: 'organization',
-				title: 'Organization',
-				icon: 'fas fa-globe-americas',
+				id: 'academics',
+				title: 'Academics',
+				icon: 'fas fa-graduation-cap',
 				data: {
-					translationKey: 'MENU.ORGANIZATION'
+					translationKey: 'MENU.ACADEMICS'
 				},
 				items: [
 					{
-						id: 'organization-equipment',
-						title: 'Equipment',
-						icon: 'fas fa-border-all',
-						link: '/pages/organization/equipment',
+						id: 'academics-library',
+						title: 'Library',
+						icon: 'fas fa-book',
+						link: '/pages/academics/library',
 						data: {
-							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_EQUIPMENT_VIEW],
-							translationKey: 'MENU.EQUIPMENT',
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_EQUIPMENT,
+							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.LIBRARY_VIEW],
+							translationKey: 'MENU.LIBRARY',
+							featureKey: FeatureEnum.FEATURE_LIBRARY,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_EQUIPMENT_EDIT
+								PermissionsEnum.LIBRARY_EDIT
 							) && {
-								add: '/pages/organization/equipment?openAddDialog=true'
+								add: '/pages/academics/library?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-inventory',
-						title: 'Inventory',
+						id: 'academics-inventory',
+						title: 'Equipment',
 						icon: 'fas fa-grip-vertical',
-						link: '/pages/organization/inventory',
+						link: '/pages/academics/equipment',
 						pathMatch: 'prefix',
 						data: {
-							translationKey: 'MENU.INVENTORY',
+							translationKey: 'MENU.EQUIPMENT',
 							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_INVENTORY,
+							featureKey: FeatureEnum.FEATURE_EQUIPMENT,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.INVENTORY_GALLERY_ADD
 							) && {
-								add: '/pages/organization/inventory/create'
+								add: '/pages/academics/equipment/create'
 							})
 						}
 					},
 					{
-						id: 'organization-tags',
+						id: 'academics-tags',
 						title: 'Tags',
 						icon: 'fas fa-tag',
-						link: '/pages/organization/tags',
+						link: '/pages/academics/tags',
 						data: {
 							translationKey: 'MENU.TAGS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_TAGS_ADD],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_TAG,
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_TAG,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_TAGS_ADD
 							) && {
-								add: '/pages/organization/tags?openAddDialog=true'
+								add: '/pages/academics/tags?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-vendors',
-						title: 'Vendors',
+						id: 'academics-vendors',
+						title: 'Suppliers',
 						icon: 'fas fa-truck',
-						link: '/pages/organization/vendors',
+						link: '/pages/academics/suppliers',
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.VENDORS',
+							translationKey: 'ACADEMICS_PAGE.SUPPLIERS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_VENDOR,
+							featureKey: FeatureEnum.FEATURE_SUPPLIER,
 							...(this._store.hasAnyPermission(PermissionsEnum.ALL_ORG_EDIT) && {
-								add: '/pages/organization/vendors?openAddDialog=true'
+								add: '/pages/academics/suppliers?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-projects',
-						title: 'Projects',
+						id: 'academics-courses',
+						title: 'Courses',
 						icon: 'fas fa-book',
-						link: `/pages/organization/projects`,
+						link: `/pages/academics/courses`,
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.PROJECTS',
-							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT, PermissionsEnum.ORG_PROJECT_VIEW],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_PROJECT,
+							translationKey: 'ACADEMICS_PAGE.COURSES',
+							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT, PermissionsEnum.COURSE_VIEW],
+							featureKey: FeatureEnum.FEATURE_COURSE,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_PROJECT_ADD
+								PermissionsEnum.COURSE_ADD
 							) && {
-								add: '/pages/organization/projects/create'
+								add: '/pages/academics/courses/create'
 							})
 						}
 					},
 					{
-						id: 'organization-departments',
+						id: 'academics-departments',
 						title: 'Departments',
 						icon: ' fas fa-briefcase',
-						link: `/pages/organization/departments`,
+						link: `/pages/academics/departments`,
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.DEPARTMENTS',
+							translationKey: 'ACADEMICS_PAGE.DEPARTMENTS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_DEPARTMENT,
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_DEPARTMENT,
 							...(this._store.hasAnyPermission(PermissionsEnum.ALL_ORG_EDIT) && {
-								add: '/pages/organization/departments?openAddDialog=true'
+								add: '/pages/academics/departments?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-teams',
-						title: 'Teams',
+						id: 'academics-classes',
+						title: 'Classes',
 						icon: 'fas fa-user-friends',
-						link: `/pages/organization/teams`,
+						link: `/pages/academics/classes`,
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.EDIT.TEAMS',
-							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT, PermissionsEnum.ORG_TEAM_VIEW],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_TEAM,
+							translationKey: 'ACADEMICS_PAGE.CLASSES',
+							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT, PermissionsEnum.CLASS_VIEW],
+							featureKey: FeatureEnum.FEATURE_CLASS,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
-								PermissionsEnum.ORG_TEAM_EDIT
+								PermissionsEnum.CLASS_EDIT
 							) && {
-								add: '/pages/organization/teams?openAddDialog=true'
+								add: '/pages/academics/classes?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-documents',
+						id: 'academics-documents',
 						title: 'Documents',
 						icon: 'far fa-file-alt',
-						link: `/pages/organization/documents`,
+						link: `/pages/academics/documents`,
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.DOCUMENTS',
+							translationKey: 'ACADEMICS_PAGE.DOCUMENTS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_DOCUMENT,
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_DOCUMENT,
 							...(this._store.hasAnyPermission(PermissionsEnum.ALL_ORG_EDIT) && {
-								add: '/pages/organization/documents?openAddDialog=true'
+								add: '/pages/academics/documents?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-employment',
-						title: 'Employment Types',
+						id: 'academics-program',
+						title: 'Programs',
 						icon: 'fas fa-layer-group',
-						link: `/pages/organization/employment-types`,
+						link: `/pages/academics/programs`,
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.EMPLOYMENT_TYPES',
+							translationKey: 'ACADEMICS_PAGE.PROGRAMS',
 							permissionKeys: [PermissionsEnum.ALL_ORG_EDIT],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_EMPLOYMENT_TYPE,
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_PROGRAM,
 							...(this._store.hasAnyPermission(PermissionsEnum.ALL_ORG_EDIT) && {
-								add: '/pages/organization/employment-types?openAddDialog=true'
+								add: '/pages/academics/programs?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-expense',
-						title: 'Expense Recurring',
+						id: 'academics-recurring-expenses',
+						title: 'Recurring Expenses',
 						icon: 'fas fa-exchange-alt fa-rotate-90',
-						link: '/pages/organization/expense-recurring',
+						link: '/pages/academics/recurring-expenses',
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.EXPENSE_RECURRING',
+							translationKey: 'ACADEMICS_PAGE.RECURRING_EXPENSES',
 							permissionKeys: [PermissionsEnum.ORG_EXPENSES_VIEW],
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_RECURRING_EXPENSE,
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_RECURRING_EXPENSE,
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_EXPENSES_EDIT
 							) && {
-								add: '/pages/organization/expense-recurring?openAddDialog=true'
+								add: '/pages/academics/recurring-expenses?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'organization-help',
+						id: 'academics-help',
 						title: 'Help Center',
 						icon: 'far fa-question-circle',
-						link: '/pages/organization/help-center',
+						link: '/pages/academics/help-center',
 						data: {
-							translationKey: 'ORGANIZATIONS_PAGE.HELP_CENTER',
-							featureKey: FeatureEnum.FEATURE_ORGANIZATION_HELP_CENTER
+							translationKey: 'ACADEMICS_PAGE.HELP_CENTER',
+							featureKey: FeatureEnum.FEATURE_ACADEMICS_HELP_CENTER
 						}
 					}
 				]
@@ -807,47 +795,47 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 						}
 					},
 					{
-						id: 'contacts-leads',
-						title: 'Leads',
+						id: 'contacts-prospects',
+						title: 'Prospects',
 						icon: 'fas fa-id-badge',
-						link: `/pages/contacts/leads`,
+						link: `/pages/contacts/prospects`,
 						data: {
-							translationKey: 'CONTACTS_PAGE.LEADS',
+							translationKey: 'CONTACTS_PAGE.PROSPECTS',
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_CONTACT_EDIT
 							) && {
-								add: '/pages/contacts/leads?openAddDialog=true'
+								add: '/pages/contacts/prospects?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'contacts-customers',
-						title: 'Customers',
+						id: 'contacts-parents',
+						title: 'Parents',
 						icon: 'fas fa-id-badge',
-						link: `/pages/contacts/customers`,
+						link: `/pages/contacts/parents`,
 						data: {
-							translationKey: 'CONTACTS_PAGE.CUSTOMERS',
+							translationKey: 'CONTACTS_PAGE.PARENTS',
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_CONTACT_EDIT
 							) && {
-								add: '/pages/contacts/customers?openAddDialog=true'
+								add: '/pages/contacts/parents?openAddDialog=true'
 							})
 						}
 					},
 					{
-						id: 'contacts-clients',
-						title: 'Clients',
+						id: 'contacts-guardians',
+						title: 'Guardians',
 						icon: 'fas fa-id-badge',
-						link: `/pages/contacts/clients`,
+						link: `/pages/contacts/guardians`,
 						data: {
-							translationKey: 'CONTACTS_PAGE.CLIENTS',
+							translationKey: 'CONTACTS_PAGE.GUARDIANS',
 							...(this._store.hasAnyPermission(
 								PermissionsEnum.ALL_ORG_EDIT,
 								PermissionsEnum.ORG_CONTACT_EDIT
 							) && {
-								add: '/pages/contacts/clients?openAddDialog=true'
+								add: '/pages/contacts/guardians?openAddDialog=true'
 							})
 						}
 					}
@@ -855,10 +843,10 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 			},
 			{
 				id: 'goals',
-				title: 'Goals',
+				title: 'Academic Goals',
 				icon: 'fab fa-font-awesome-flag',
 				data: {
-					translationKey: 'MENU.GOALS'
+					translationKey: 'MENU.ACADEMIC_GOALS'
 				},
 				items: [
 					{
@@ -929,12 +917,12 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 		return [
 			{
 				id: 'invite-people',
-				title: 'Invite people',
+				title: 'Invite Students',
 				icon: 'fas fa-user-plus',
-				link: '/pages/employees/invites',
+				link: '/pages/users/invites',
 				menuCategory: 'accordion',
 				data: {
-					translationKey: 'MENU.INVITE_PEOPLE',
+					translationKey: 'MENU.INVITE_STUDENTS',
 					permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_INVITE_VIEW],
 					featureKey: FeatureEnum.FEATURE_MANAGE_INVITE
 				}
@@ -968,13 +956,13 @@ export class BaseNavMenuComponent extends TranslationBaseComponent implements On
 				}
 			},
 			{
-				id: 'organizations',
-				title: 'Organizations',
-				icon: 'fas fa-globe',
-				link: '/pages/organizations',
+				id: 'schools',
+				title: 'Schools',
+				icon: 'fas fa-school',
+				link: '/pages/schools',
 				menuCategory: 'accordion',
 				data: {
-					translationKey: 'MENU.ORGANIZATIONS',
+					translationKey: 'MENU.SCHOOLS',
 					permissionKeys: [PermissionsEnum.ALL_ORG_VIEW, PermissionsEnum.ORG_EXPENSES_EDIT],
 					featureKey: FeatureEnum.FEATURE_ORGANIZATIONS
 				}

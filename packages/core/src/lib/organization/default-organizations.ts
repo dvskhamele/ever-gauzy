@@ -2,7 +2,7 @@ import { CurrenciesEnum, DefaultValueDateTypeEnum } from '@gauzy/contracts';
 
 export const DEFAULT_EVER_ORGANIZATIONS = [
 	{
-		name: 'Ever Technologies LTD',
+		name: 'School Gauzy',
 		currency: CurrenciesEnum.BGN,
 		defaultValueDateType: DefaultValueDateTypeEnum.TODAY,
 		imageUrl: 'assets/images/logos/ever-large.jpg',
@@ -10,7 +10,7 @@ export const DEFAULT_EVER_ORGANIZATIONS = [
 		totalEmployees: 17
 	},
 	{
-		name: 'Ever Co. Ltd',
+		name: 'School Gauzy',
 		currency: CurrenciesEnum.ILS,
 		defaultValueDateType: DefaultValueDateTypeEnum.TODAY,
 		imageUrl: 'assets/images/logos/ever-large.jpg',

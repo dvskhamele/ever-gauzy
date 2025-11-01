@@ -42,8 +42,8 @@ import {
 } from '@gauzy/ui-core/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { InvoiceAddComponent } from './invoice-add/invoice-add.component';
-import { InvoicesComponent } from './invoices.component';
-import { InvoicesRoutingModule } from './invoices-routing.module';
+import { BillingComponent } from './billing.component';
+import { BillingRoutingModule } from './billing-routing.module';
 import { InvoiceEditComponent } from './invoice-edit/invoice-edit.component';
 import { InvoicesReceivedComponent } from './invoices-received/invoices-received.component';
 import { InvoiceSendMutationComponent } from './invoice-send/invoice-send-mutation.component';
@@ -146,7 +146,7 @@ import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
 		CurrencyPositionPipe
 	],
 	declarations: [
-		InvoicesComponent,
+		BillingComponent,
 		InvoiceAddComponent,
 		InvoiceTasksSelectorComponent,
 		InvoiceProjectsSelectorComponent,
@@ -175,4 +175,4 @@ import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
 	],
 	exports: []
 })
-export class InvoicesModule {}
+export class BillingModule {}

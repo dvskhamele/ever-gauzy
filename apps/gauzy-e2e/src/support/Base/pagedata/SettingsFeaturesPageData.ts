@@ -1,7 +1,7 @@
 export const SettingsFeaturesPageData = {
 	headerText: 'Settings',
 	subheaderTextTenant: "Manage Features for",
-	subheaderTextOrganization: "Manage Features for 'Ever Technologies LTD'",
+	subheaderTextOrganization: "Manage Features for 'School Gauzy'",
 	// Tenant
 	taskDashboard: 'Task Dashboard',
 	teamTaskDashboard: 'Team Task Dashboard',

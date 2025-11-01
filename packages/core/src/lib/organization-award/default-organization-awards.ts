@@ -1,6 +1,6 @@
 export const DEFAULT_ORGANIZATION_AWARDS = {
-	'Top Software Development Company': 2015,
-	'Upwork Top Rated Development Company 2019': 2019,
-	'Upwork Top Rated Development Company 2018': 2018,
-	'Upwork Top Rated Development Company 2017': 2017
+	'Excellence in Education Award': 2023,
+	'Innovation in Learning Technology': 2022,
+	'Best School Management Platform': 2021,
+	'Outstanding Educational Service': 2020
 };

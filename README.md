@@ -1,13 +1,13 @@
 # Ever Gauzy Platform
 
-[uri_gauzy]: https://readylaunch.signimus.com
+[uri_gauzy]: https://school.gauzy.com
 [uri_license]: https://www.gnu.org/licenses/agpl-3.0.html
 [uri_license_image]: https://img.shields.io/badge/License-AGPL%20v3-blue.svg
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ever-co.gauzy-platform)
 [![License: AGPL v3][uri_license_image]][uri_license]
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ever-co/ever-gauzy)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/signimus/ever-gauzy)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/schoolgauzy/schoolgauzy)
 
 ## 💡 What's New
 
@@ -28,7 +28,7 @@ It's built with a React (NextJs) / ReactNative (Expo) stack and connects to head
 
 ![overview](https://docs.gauzy.co/overview.png)
 
-Ever® Gauzy™ Platform is a part of our larger Open Platform for **Collaborative, On-Demand and Sharing Economies** - [Signimus™ Platform™](https://signimus.com).
+School Gauzy Platform is an open-source management system designed for **Schools and Educational Organizations** - [School Management Platform](https://school.gauzy.com).
 
 ## ✨ Features
 
@@ -139,7 +139,7 @@ In addition, all downloads are also available from the following pages:
 
 ### Production (SaaS)
 
-Ever® Gauzy™ Platform SaaS is available at <https://readylaunch.signimus.com>.
+School Gauzy Platform SaaS is available at <https://school.gauzy.com>.
 
 Note: it's currently in Alpha version/testing mode, please use it cautiously!
 
@@ -293,14 +293,14 @@ Notes:
 
 ## 💌 Contact Us
 
--   [Signimus.com Website Contact Us page](https://signimus.com/contacts)
+-   [School Gauzy Contact Us page](https://school.gauzy.com/contacts)
 -   [Slack Community](https://join.slack.com/t/gauzy/shared_invite/enQtNzc5MTA5MDUwODg2LTI0MGEwYTlmNWFlNzQzMzBlOWExNTk0NzAyY2IwYWYwMzZjMTliYjMwNDI3NTJmYmM4MDQ4NDliMDNiNDY1NWU)
 -   [Discord Chat](https://discord.gg/hKQfn4j)
 -   [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/signimus/ever-gauzy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 -   [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/signimus?utm_source=github&utm_medium=button&utm_term=signimus&utm_campaign=github)
--   For business inquiries: <mailto:gauzy@signimus.com>
--   Please report security vulnerabilities to <mailto:security@signimus.com>
--   [Gauzy Platform @ Facebook](https://www.facebook.com/signimus)
+-   For business inquiries: <mailto:support@school.gauzy.com>
+-   Please report security vulnerabilities to <mailto:security@school.gauzy.com>
+-   [School Gauzy @ Facebook](https://www.facebook.com/schoolgauzy)
 
 ## 🔐 Security
 
@@ -330,8 +330,7 @@ This software is available under the following licenses:
 
 ## ™️ Trademarks
 
-**Ever**® is a registered trademark of [Ever Co. LTD](https://ever.co).
-**Ever® Demand™**, **Ever® Gauzy™**, **Ever® Teams™**, **Ever® Rec™**, **Ever® Recu™**, **Ever® Cloc™**, **Ever® Works™** and **Ever® OpenSaaS™** are all trademarks of [Ever Co. LTD](https://ever.co).
+School Gauzy Platform is an open-source school management system for educational institutions.
 
 The trademarks may only be used with the written permission of Ever Co. LTD. and may not be used to promote or otherwise market competitive products or services.
 
@@ -364,7 +363,7 @@ You can also view a full list of our [contributors tracked by Github](https://gi
 
 ## ©️ Copyright
 
-#### Copyright © 2019-present, Signimus. All rights reserved
+#### Copyright © 2019-present, School Gauzy. All rights reserved
 
 [![Circle CI](https://circleci.com/gh/signimus/ever-gauzy.svg?style=svg)](https://circleci.com/gh/signimus/ever-gauzy)
 [![codecov](https://codecov.io/gh/signimus/ever-gauzy/branch/master/graph/badge.svg)](https://codecov.io/gh/signimus/ever-gauzy)

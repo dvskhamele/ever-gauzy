@@ -60,8 +60,8 @@ const routes: Routes = [
 							import('./expense-recurring/expense-recurring.module').then((m) => m.ExpenseRecurringModule)
 					},
 					{
-						path: 'invoices',
-						loadChildren: () => import('./invoices/invoices.module').then((m) => m.InvoicesModule),
+						path: 'billing',
+						loadChildren: () => import('./billing/billing.module').then((m) => m.BillingModule),
 						data: {
 							selectors: {
 								project: false,
@@ -125,8 +125,8 @@ const routes: Routes = [
 						}
 					},
 					{
-						path: 'invoices',
-						loadChildren: () => import('./invoices/invoices.module').then((m) => m.InvoicesModule),
+						path: 'billing',
+						loadChildren: () => import('./billing/billing.module').then((m) => m.BillingModule),
 						data: {
 							selectors: {
 								project: false,

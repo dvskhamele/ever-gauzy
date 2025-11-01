@@ -53,46 +53,46 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 	 * @returns {void}
 	 */
 	registerPageTabs(): void {
-		// Register the teams tab
+		// Register the classes tab
 		this._pageTabRegistryService.registerPageTab({
 			tabsetId: this.tabsetId, // The identifier for the tabset
-			tabId: 'teams', // The identifier for the tab
+			tabId: 'classes', // The identifier for the tab
 			tabsetType: 'route', // The type of tabset to use
-			route: '/pages/dashboard/teams', // The route for the tab
-			tabTitle: (_i18n) => _i18n.getTranslation('ORGANIZATIONS_PAGE.TEAMS'), // The title for the tab
-			tabIcon: 'people-outline', // The icon for the tab
+			route: '/pages/dashboard/classes', // The route for the tab
+			tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.CLASSES'), // The title for the tab
+			tabIcon: 'book-outline', // The icon for the tab
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 1, // The order of the tab,
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.TEAM_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.CLASS_DASHBOARD]
 		});
 
-		// Register the project management tab
+		// Register the course management tab
 		this._pageTabRegistryService.registerPageTab({
 			tabsetId: this.tabsetId, // The identifier for the tabset
-			tabId: 'project-management', // The identifier for the tab
+			tabId: 'course-management', // The identifier for the tab
 			tabsetType: 'route', // The type of tabset to use
-			route: '/pages/dashboard/project-management', // The route for the tab
-			tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.PROJECT_MANAGEMENT'), // The title for the tab
-			tabIcon: 'browser-outline', // The icon for the tab
+			route: '/pages/dashboard/course-management', // The route for the tab
+			tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.COURSE_MANAGEMENT'), // The title for the tab
+			tabIcon: 'book-open-outline', // The icon for the tab
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 2, // The order of the tab
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.PROJECT_MANAGEMENT_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.COURSE_MANAGEMENT_DASHBOARD]
 		});
 
-		// Register the time tracking tab
+		// Register the attendance tab
 		this._pageTabRegistryService.registerPageTab({
 			tabsetId: this.tabsetId, // The identifier for the tabset
-			tabId: 'time-tracking', // The identifier for the tab
+			tabId: 'attendance', // The identifier for the tab
 			tabsetType: 'route', // The type of tabset to use
-			route: '/pages/dashboard/time-tracking', // The route for the tab
-			tabTitle: (_i18n) => _i18n.getTranslation('TIMESHEET.TIME_TRACKING'), // The title for the tab
-			tabIcon: 'clock-outline', // The icon for the tab
+			route: '/pages/dashboard/attendance', // The route for the tab
+			tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.ATTENDANCE'), // The title for the tab
+			tabIcon: 'clipboard-outline', // The icon for the tab
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 3, // The order of the tab
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.TIME_TRACKING_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.ATTENDANCE_DASHBOARD]
 		});
 	}
 
@@ -105,37 +105,37 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 		this._pageTabRegistryService.removePageTab('dashboard', 'accounting');
 		this._pageTabRegistryService.removePageTab('dashboard', 'hr');
 
-		// Check if the user has permission to view accounting
+		// Check if the user has permission to view finance
 		if (!this.selectedEmployee || !this.selectedEmployee.id) {
-			// Register the accounting tab
+			// Register the finance tab
 			this._pageTabRegistryService.registerPageTab({
 				tabsetId: this.tabsetId, // The identifier for the tabset
-				tabId: 'accounting', // The identifier for the tab
+				tabId: 'finance', // The identifier for the tab
 				tabsetType: 'route', // The type of tabset to use
-				route: '/pages/dashboard/accounting', // The route for the tab
-				tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.ACCOUNTING'), // The title for the tab
+				route: '/pages/dashboard/finance', // The route for the tab
+				tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.FINANCE'), // The title for the tab
 				tabIcon: 'credit-card-outline', // The icon for the tab
 				responsive: true, // Whether the tab is responsive
 				activeLinkOptions: { exact: false }, // The options for the active link
 				order: 4, // The order of the tab
-				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.ACCOUNTING_DASHBOARD]
+				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.FINANCE_DASHBOARD]
 			});
 		}
 
-		// Check if the user has permission to view human resources
+		// Check if the user has permission to view staff management
 		if (this.selectedEmployee && this.selectedEmployee.id) {
-			// Register the human resources tab
+			// Register the staff management tab
 			this._pageTabRegistryService.registerPageTab({
 				tabsetId: this.tabsetId, // The identifier for the tabset
-				tabId: 'hr', // The identifier for the tab
+				tabId: 'staff-management', // The identifier for the tab
 				tabsetType: 'route', // The type of tabset to use
-				route: '/pages/dashboard/hr', // The route for the tab
-				tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.HUMAN_RESOURCES'), // The title for the tab
-				tabIcon: 'person-outline', // The icon for the tab
+				route: '/pages/dashboard/staff-management', // The route for the tab
+				tabTitle: (_i18n) => _i18n.getTranslation('DASHBOARD_PAGE.STAFF_MANAGEMENT'), // The title for the tab
+				tabIcon: 'people-outline', // The icon for the tab
 				responsive: true, // Whether the tab is responsive
 				activeLinkOptions: { exact: false }, // The options for the active link
 				order: 5, // The order of the tab
-				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.HUMAN_RESOURCE_DASHBOARD]
+				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.STAFF_MANAGEMENT_DASHBOARD]
 			});
 		}
 

@@ -32,14 +32,14 @@ export class DataEntryShortcutsComponent implements OnInit, OnDestroy {
 	 * Navigate to the income page and open the add dialog.
 	 */
 	async addIncome(): Promise<void> {
-		await this.router.navigateByUrl('pages/accounting/income?openAddDialog=true');
+		await this.router.navigateByUrl('pages/billing/income?openAddDialog=true');
 	}
 
 	/**
 	 * Navigate to the expenses page and open the add dialog.
 	 */
 	async addExpense(): Promise<void> {
-		await this.router.navigateByUrl('pages/accounting/expenses?openAddDialog=true');
+		await this.router.navigateByUrl('pages/billing/expenses?openAddDialog=true');
 	}
 
 	/**

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PermissionsGuard } from '@gauzy/ui-core/core';
 import { PermissionsEnum } from '@gauzy/contracts';
 import { DateRangePickerResolver } from '@gauzy/ui-core/shared';
-import { InvoicesComponent } from './invoices.component';
+import { BillingComponent } from './billing.component';
 import { InvoiceAddComponent } from './invoice-add/invoice-add.component';
 import { InvoiceEditComponent } from './invoice-edit/invoice-edit.component';
 import { InvoicesReceivedComponent } from './invoices-received/invoices-received.component';
@@ -22,7 +22,7 @@ export function redirectTo() {
 const routes: Routes = [
 	{
 		path: '',
-		component: InvoicesComponent,
+		component: BillingComponent,
 		canActivate: [PermissionsGuard],
 		data: {
 			permissions: {
@@ -191,4 +191,4 @@ const routes: Routes = [
 	imports: [RouterModule.forChild(routes)],
 	exports: [RouterModule]
 })
-export class InvoicesRoutingModule {}
+export class BillingRoutingModule {}

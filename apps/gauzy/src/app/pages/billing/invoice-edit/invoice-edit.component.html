@@ -16,7 +16,7 @@
 				<div class="card-header-title">
 					<ngx-back-navigation></ngx-back-navigation>
 					<h4>
-						{{ (isEstimate ? 'INVOICES_PAGE.EDIT_ESTIMATE' : 'INVOICES_PAGE.EDIT_INVOICE' ) | translate }}
+						{{ (isEstimate ? 'FEES_PAGE.EDIT_ESTIMATE' : 'FEES_PAGE.EDIT_FEE' ) | translate }}
 					</h4>
 				</div>
 				<ng-container *ngIf="!isEstimate">
@@ -46,7 +46,7 @@
 							<div class="form-group">
 								<label for="inputInvoiceNumber" class="label">
 									<span>
-										{{ (isEstimate ? 'INVOICES_PAGE.ESTIMATE_NUMBER' : 'INVOICES_PAGE.INVOICE_NUMBER' ) | translate }}
+										{{ (isEstimate ? 'FEES_PAGE.ESTIMATE_NUMBER' : 'FEES_PAGE.FEE_NUMBER' ) | translate }}
 									</span>
 								</label>
 								<input
@@ -67,7 +67,7 @@
 						</div>
 						<div class="col-sm-6">
 							<label for="inputOrganizationContact" class="label"
-								>{{ 'INVOICES_PAGE.CONTACT' | translate }}
+								>{{ 'FEES_PAGE.CONTACT' | translate }}
 							</label>
 							<ga-contact-select
 								[addTag]="true"
@@ -89,8 +89,8 @@
 									<span>
 										{{
 											(isEstimate
-												? 'INVOICES_PAGE.ESTIMATE_DATE'
-												: 'INVOICES_PAGE.INVOICE_DATE'
+												? 'FEES_PAGE.ESTIMATE_DATE'
+												: 'FEES_PAGE.FEE_DATE'
 											) | translate
 										}}</span
 									>
@@ -101,8 +101,8 @@
 									nbInput
 									[placeholder]="
 										(isEstimate
-											? 'INVOICES_PAGE.ESTIMATE_DATE'
-											: 'INVOICES_PAGE.INVOICE_DATE'
+											? 'FEES_PAGE.ESTIMATE_DATE'
+											: 'FEES_PAGE.FEE_DATE'
 										) | translate
 									"
 									[nbDatepicker]="invoiceEstimateDatePicker"
@@ -118,12 +118,12 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label for="inputDueDate" class="label">{{
-									'INVOICES_PAGE.DUE_DATE' | translate
+									'FEES_PAGE.DUE_DATE' | translate
 								}}</label>
 								<input
 									nbInput
 									placeholder="{{
-										'INVOICES_PAGE.DUE_DATE' | translate
+										'FEES_PAGE.DUE_DATE' | translate
 									}}"
 									[nbDatepicker]="dueDatePicker"
 									formControlName="dueDate"

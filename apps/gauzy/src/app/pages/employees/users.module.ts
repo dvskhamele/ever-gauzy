@@ -148,4 +148,4 @@ const COMPONENTS = [
 	declarations: [...COMPONENTS],
 	providers: [OrganizationsService, InviteGuard, CandidatesService, OrganizationEmploymentTypesService, SkillsService]
 })
-export class EmployeesModule {}
+export class UsersModule {}

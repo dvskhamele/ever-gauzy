@@ -66,4 +66,4 @@ const COMPONENTS = [ContactsComponent, InviteContactComponent, ContactMutationCo
 	declarations: [...COMPONENTS],
 	providers: [OrganizationContactService, OrganizationProjectsService, InviteService]
 })
-export class ContactsModule {}
+export class ParentsModule {}

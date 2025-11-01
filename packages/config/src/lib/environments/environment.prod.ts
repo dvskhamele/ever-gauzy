@@ -288,7 +288,7 @@ export const environment: IEnvironment = {
 			process.env.APP_EMAIL_CONFIRMATION_URL || `${process.env.CLIENT_BASE_URL}/#/auth/confirm-email`,
 		appMagicSignUrl: process.env.APP_MAGIC_SIGN_URL || `${process.env.CLIENT_BASE_URL}/#/auth/magic-sign-in`,
 		companyLink: process.env.COMPANY_LINK || 'https://ever.co',
-		companyName: process.env.COMPANY_NAME || 'Ever Co. LTD'
+		companyName: process.env.COMPANY_NAME || 'School Gauzy'
 	},
 
 	demo: process.env.DEMO === 'true' ? true : false,

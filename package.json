@@ -1,7 +1,7 @@
 {
-	"name": "ever-gauzy",
-	"version": "0.1.0",
-	"description": "Ever Gauzy - Business Management Platform (ERP/CRM/HRM/ATS/PM)",
+	"name": "newton-schools",
+	"version": "1.0.0",
+	"description": "Newton for Schools - School Management Platform (SIS/ERP)",
 	"license": "AGPL-3.0",
 	"homepage": "https://readylaunch.signimus.com",
 	"repository": {

@@ -8,7 +8,7 @@
 						<img
 							class="employee-image"
 							[src]="selectedEmployee?.user?.image?.fullUrl || selectedEmployee?.user?.imageUrl"
-							alt="Employee Avatar"
+							alt="User Avatar"
 						/>
 
 						<div class="employee-details flex-column align-items-start">
@@ -30,7 +30,7 @@
 				</div>
 				<ngx-favorite-toggle
 					*ngIf="selectedEmployee"
-					[entityType]="'Employee'"
+					[entityType]="'User'"
 					[entityId]="selectedEmployee.id"
 					[entityName]="selectedEmployee.user?.name"
 					size="small"
