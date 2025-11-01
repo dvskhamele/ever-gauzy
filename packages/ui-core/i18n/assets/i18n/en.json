@@ -5945,7 +5945,7 @@
 		"TIMER": "Timer",
 		"MANUAL": "Manual",
 		"MANUAL_NOT_ALLOW": "Manual time not allowed",
-		"SELECT_PROJECT": "Select Project",
+		"SELECT_PROJECT": "Select Class/Subject/Course",
 		"SELECT_TASK": "Select Task",
 		"SELECT_CLIENT": "Select Client",
 		"SELECT_TEAM": "Select Team",
