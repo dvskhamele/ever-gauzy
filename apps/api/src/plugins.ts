@@ -18,6 +18,7 @@ import { VideosPlugin } from '@gauzy/plugin-videos';
 import { RegistryPlugin } from '@gauzy/plugin-registry';
 import { CamshotPlugin } from '@gauzy/plugin-camshot';
 
+
 import { SentryTracing as SentryPlugin } from './sentry';
 import { PosthogAnalytics as PosthogPlugin } from './posthog';
 import { SoundshotPlugin } from '@gauzy/plugin-soundshot';
