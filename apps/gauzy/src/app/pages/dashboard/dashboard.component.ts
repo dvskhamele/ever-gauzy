@@ -64,7 +64,7 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 1, // The order of the tab,
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.CLASS_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.CLASS_VIEW]
 		});
 
 		// Register the course management tab
@@ -78,7 +78,7 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 2, // The order of the tab
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.COURSE_MANAGEMENT_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.COURSE_VIEW]
 		});
 
 		// Register the attendance tab
@@ -92,7 +92,7 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 			responsive: true, // Whether the tab is responsive
 			activeLinkOptions: { exact: false }, // The options for the active link
 			order: 3, // The order of the tab
-			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.ATTENDANCE_DASHBOARD]
+			permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.TEAM_DASHBOARD]
 		});
 	}
 
