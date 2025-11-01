@@ -118,7 +118,7 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 				responsive: true, // Whether the tab is responsive
 				activeLinkOptions: { exact: false }, // The options for the active link
 				order: 4, // The order of the tab
-				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.FINANCE_DASHBOARD]
+				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.ACCOUNTING_DASHBOARD]
 			});
 		}
 
@@ -135,7 +135,7 @@ export class DashboardComponent extends TranslationBaseComponent implements OnIn
 				responsive: true, // Whether the tab is responsive
 				activeLinkOptions: { exact: false }, // The options for the active link
 				order: 5, // The order of the tab
-				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.STAFF_MANAGEMENT_DASHBOARD]
+				permissions: [PermissionsEnum.ADMIN_DASHBOARD_VIEW, PermissionsEnum.HUMAN_RESOURCE_DASHBOARD]
 			});
 		}
 
