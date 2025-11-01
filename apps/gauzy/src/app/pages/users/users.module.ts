@@ -62,7 +62,7 @@ const COMPONENTS = [
 		UsersRoutingModule,
 		UserMultiSelectModule,
 		UserOrganizationsMultiSelectModule,
-		OrganizationsModule,
+		SchoolsModule,
 		NbActionsModule,
 		NbCardModule,
 		NbButtonModule,
