@@ -46,8 +46,8 @@ const routes: Routes = [
 			{
 				path: 'finance-templates',
 				loadChildren: () =>
-					import('../finance-templates/finance-templates.module').then(
-						(m) => m.FinanceTemplatesModule
+					import('../finance-templates/accounting-templates.module').then(
+						(m) => m.AccountingTemplatesModule
 					)
 			},
 			{

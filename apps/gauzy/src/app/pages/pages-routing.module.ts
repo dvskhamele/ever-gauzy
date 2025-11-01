@@ -81,7 +81,7 @@ const routes: Routes = [
 			},
 			{
 				path: 'contacts',
-				loadChildren: () => import('./contacts/contacts.module').then((m) => m.ContactsModule)
+				loadChildren: () => import('./contacts/parents.module').then((m) => m.ParentsModule)
 			},
 			{
 				path: 'projects',
@@ -98,7 +98,7 @@ const routes: Routes = [
 			},
 			{
 				path: 'tasks',
-				loadChildren: () => import('./tasks/tasks.module').then((m) => m.TasksModule)
+				loadChildren: () => import('./tasks/assignments.module').then((m) => m.AssignmentsModule)
 			},
 			{
 				path: 'jobs',
@@ -171,7 +171,7 @@ const routes: Routes = [
 				children: [
 					{
 						path: '',
-						loadChildren: () => import('./employees/employees.module').then((m) => m.EmployeesModule)
+						loadChildren: () => import('./employees/users.module').then((m) => m.UsersModule)
 					},
 					{
 						path: 'schedules',
@@ -398,7 +398,7 @@ const routes: Routes = [
 					},
 					{
 						path: 'projects',
-						loadChildren: () => import('./projects/projects.module').then((m) => m.ProjectsModule),
+						loadChildren: () => import('./projects/courses.module').then((m) => m.CoursesModule),
 						data: {
 							selectors: {
 								project: false,
@@ -619,7 +619,8 @@ const routes: Routes = [
 			},
 			{
 				path: 'organizations',
-				loadChildren: () => import('./organizations/organizations.module').then((m) => m.OrganizationsModule)
+				loadChildren: () => import('./organizations/schools.module').then((m) => m.SchoolsModule)
+			},
 			},
 			{
 				path: 'auth',

@@ -5,7 +5,7 @@ import { PermissionsEnum } from '@gauzy/contracts';
 import { DateRangePickerResolver } from '@gauzy/ui-core/shared';
 import { DashboardComponent } from './dashboard.component';
 import { HumanResourcesComponent } from './human-resources/human-resources.component';
-import { FinanceComponent } from './finance/finance.component';
+import { AccountingComponent } from './accounting/accounting.component';
 import { ProjectManagementComponent } from './project-management/project-management.component';
 import { TimeTrackingComponent } from './time-tracking/time-tracking.component';
 import { TeamComponent } from './team/team.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
 			},
 			{
 				path: 'finance',
-				component: FinanceComponent,
+				component: AccountingComponent,
 				data: {
 					selectors: {
 						project: false

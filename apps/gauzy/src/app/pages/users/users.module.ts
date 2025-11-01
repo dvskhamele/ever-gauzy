@@ -38,7 +38,7 @@ import { UsersComponent } from './users.component';
 import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
 import { EditUserMutationComponent } from './edit-user-mutation/edit-user-mutation.component';
 import { ManageUserInviteComponent } from './manage-user-invite/manage-user-invite.component';
-
+import { SchoolsModule } from '../organizations/schools.module';
 import { EditUserOrganizationsComponent } from './edit-user-profile/edit-user-organizations/edit-user-organizations.component';
 import { EditUserDataComponent } from './edit-user-profile/edit-user-data/edit-user-data.component';
 import { EditUserOrganizationsMutationComponent } from './edit-user-profile/edit-user-organizations/edit-user-organizations-mutation/edit-user-organizations-mutation.component';
@@ -62,7 +62,7 @@ const COMPONENTS = [
 		UsersRoutingModule,
 		UserMultiSelectModule,
 		UserOrganizationsMultiSelectModule,
-		OrganizationsModule,
+		SchoolsModule,
 		NbActionsModule,
 		NbCardModule,
 		NbButtonModule,

@@ -42,7 +42,7 @@ import {
 	TagsOnlyComponent,
 	getAdjustDateRangeFutureAllowed
 } from '@gauzy/ui-core/shared';
-import { PaymentMutationComponent } from '../invoices/invoice-payments/payment-mutation/payment-mutation.component';
+import { PaymentMutationComponent } from '../billing/invoice-payments/payment-mutation/payment-mutation.component';
 
 @UntilDestroy({ checkProperties: true })
 @Component({
