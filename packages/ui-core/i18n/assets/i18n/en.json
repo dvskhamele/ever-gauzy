@@ -5825,10 +5825,10 @@
 			"EDIT_ORGANIZATIONS_PROJECTS": {
 				"ADD_PROJECT": "Class/Subject/Course '{{ name }}' was saved",
 				"REMOVE_PROJECT": "Class/Subject/Course '{{ name }}' was removed",
-				"INVALID_PROJECT_NAME": "Please fill in the name of your project",
-				"VISIBILITY": "Now project is {{ name }} ",
+				"INVALID_PROJECT_NAME": "Please fill in the name of your class/subject/course",
+				"VISIBILITY": "Now class/subject/course is {{ name }} ",
 				"SYNC_REPOSITORY": "Repository '{{ repository }}' sync with '{{ project }}'",
-				"AUTO_SYNC_SETTING": "Auto Sync Setting for Project '{{ project }}' was saved"
+				"AUTO_SYNC_SETTING": "Auto Sync Setting for Class/Subject/Course '{{ project }}' was saved"
 			},
 			"EDIT_ORGANIZATIONS_TEAM": {
 				"ADD_NEW_TEAM": "Team '{{ name }}' was added",
@@ -5945,7 +5945,7 @@
 		"TIMER": "Timer",
 		"MANUAL": "Manual",
 		"MANUAL_NOT_ALLOW": "Manual time not allowed",
-		"SELECT_PROJECT": "Select Project",
+		"SELECT_PROJECT": "Select Class/Subject/Course",
 		"SELECT_TASK": "Select Task",
 		"SELECT_CLIENT": "Select Client",
 		"SELECT_TEAM": "Select Team",
