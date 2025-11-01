@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CKEditorModule } from 'ckeditor4-angular';
 import {
 	NbCardModule,
 	NbButtonModule,
@@ -85,7 +86,8 @@ const COMPONENTS = [
 		NgxPermissionsModule.forChild(),
 		SmartDataViewLayoutModule,
 		CardGridModule,
-		SharedModule
+		SharedModule,
+		CKEditorModule
 	],
 	declarations: [...COMPONENTS],
 	providers: [OrganizationsService, UsersOrganizationsService, InviteGuard, UserIdService]
