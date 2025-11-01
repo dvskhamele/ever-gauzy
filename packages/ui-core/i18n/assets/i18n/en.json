@@ -5826,7 +5826,7 @@
 				"ADD_PROJECT": "Class/Subject/Course '{{ name }}' was saved",
 				"REMOVE_PROJECT": "Class/Subject/Course '{{ name }}' was removed",
 				"INVALID_PROJECT_NAME": "Please fill in the name of your class/subject/course",
-				"VISIBILITY": "Now project is {{ name }} ",
+				"VISIBILITY": "Now class/subject/course is {{ name }} ",
 				"SYNC_REPOSITORY": "Repository '{{ repository }}' sync with '{{ project }}'",
 				"AUTO_SYNC_SETTING": "Auto Sync Setting for Project '{{ project }}' was saved"
 			},
