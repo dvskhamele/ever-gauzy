@@ -4666,7 +4666,7 @@
 		"TASK_ADDED": "Task was added",
 		"TASK_UPDATED": "Task was changed",
 		"TASK_DELETED": "Task was removed",
-		"TASKS_PROJECT": "Project",
+		"TASKS_PROJECT": "Class/Subject/Course",
 		"TASKS_CREATOR": "Created By",
 		"TASK_MEMBERS": "Employees",
 		"TASK_ASSIGNED_TO": "Assigned To",
