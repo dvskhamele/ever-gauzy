@@ -5828,7 +5828,7 @@
 				"INVALID_PROJECT_NAME": "Please fill in the name of your class/subject/course",
 				"VISIBILITY": "Now class/subject/course is {{ name }} ",
 				"SYNC_REPOSITORY": "Repository '{{ repository }}' sync with '{{ project }}'",
-				"AUTO_SYNC_SETTING": "Auto Sync Setting for Project '{{ project }}' was saved"
+				"AUTO_SYNC_SETTING": "Auto Sync Setting for Class/Subject/Course '{{ project }}' was saved"
 			},
 			"EDIT_ORGANIZATIONS_TEAM": {
 				"ADD_NEW_TEAM": "Team '{{ name }}' was added",
