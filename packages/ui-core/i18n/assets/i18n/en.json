@@ -5032,7 +5032,7 @@
 			"GENERATE_ESTIMATE_ITEMS": "Generate Estimate Items",
 			"GENERATE_FOR_UNINVOICED_EXPENSES": "Generate for all uninvoiced expenses",
 			"BY_EMPLOYEE_HOURS": "By Employee Hours",
-			"BY_PROJECT_HOURS": "By Project Hours",
+			"BY_PROJECT_HOURS": "By Class/Subject/Course Hours",
 			"BY_TASK_HOURS": "By Task Hours",
 			"BY_PRODUCTS": "By Products",
 			"BY_EXPENSES": "By Expenses",
