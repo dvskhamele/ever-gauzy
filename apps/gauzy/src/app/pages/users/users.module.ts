@@ -38,7 +38,7 @@ import { UsersComponent } from './users.component';
 import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
 import { EditUserMutationComponent } from './edit-user-mutation/edit-user-mutation.component';
 import { ManageUserInviteComponent } from './manage-user-invite/manage-user-invite.component';
-import { OrganizationsModule } from '../organizations/organizations.module';
+
 import { EditUserOrganizationsComponent } from './edit-user-profile/edit-user-organizations/edit-user-organizations.component';
 import { EditUserDataComponent } from './edit-user-profile/edit-user-data/edit-user-data.component';
 import { EditUserOrganizationsMutationComponent } from './edit-user-profile/edit-user-organizations/edit-user-organizations-mutation/edit-user-organizations-mutation.component';
