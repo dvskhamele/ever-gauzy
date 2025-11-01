@@ -5039,7 +5039,7 @@
 			"DETAILED_ITEMS": "Detailed Items",
 			"SELECT_INVOICE_TYPE": "Select an invoice type",
 			"SELECT_ESTIMATE_TYPE": "Select an estimate type",
-			"SELECT_PROJECTS": "Select projects",
+			"SELECT_PROJECTS": "Select classes/subjects/courses",
 			"SELECT_TASKS": "Select tasks",
 			"SELECT_PRODUCTS": "Select products",
 			"SELECT_EXPENSES": "Select expenses"
