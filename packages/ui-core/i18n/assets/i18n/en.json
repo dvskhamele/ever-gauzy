@@ -6278,7 +6278,7 @@
 		"NO_TIMELOG": "No timelogs found",
 		"TODO": "To-do",
 		"NO_TODO": "No To-do",
-		"OVERLAP_MESSAGE": "This time entry overlaps activity in other projects/tasks, Which will be replaced:",
+		"OVERLAP_MESSAGE": "This time entry overlaps activity in other classes/subjects/courses/tasks, Which will be replaced:",
 		"REASON": "Reason",
 		"NOTES": "Notes",
 		"APPS": "Apps",
