@@ -42,7 +42,8 @@ import { AddArticleModule } from './add-article/add-article.module';
 		SidebarModule,
 		TranslateModule.forChild(),
 		SmartDataViewLayoutModule,
-		SharedModule
+		SharedModule,
+		CKEditorModule
 	],
 	declarations: [HelpCenterComponent]
 })
