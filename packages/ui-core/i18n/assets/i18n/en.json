@@ -3971,7 +3971,7 @@
 				"REQUIRE_REASON_INFO": "Reason of the add manual time or edit time logs.",
 				"REQUIRE_DESCRIPTION": "Require Description",
 				"REQUIRE_DESCRIPTION_INFO": "Description of the tracked time will be required when timer starting and also for the time logs adding or editing manual time.",
-				"REQUIRE_PROJECT": "Require Project",
+				"REQUIRE_PROJECT": "Require Class/Subject/Course",
 				"REQUIRE_PROJECT_INFO": "Project of the tracked time will be required when timer starting and also for the time logs adding or editing manual time.",
 				"REQUIRE_TASK": "Require Task",
 				"REQUIRE_TASK_INFO": "Task of the tracked time will be required when timer starting and also for the time logs adding or editing manual time.",
