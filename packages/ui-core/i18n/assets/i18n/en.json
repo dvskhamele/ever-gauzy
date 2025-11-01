@@ -3855,7 +3855,7 @@
 		"VENDOR": "Vendor",
 		"NAME": "Name",
 		"EXPENSE_CATEGORIES": "Expense Categories",
-		"PROJECTS": "Projects",
+		"PROJECTS": "Classes/Subjects/Courses",
 		"ACTIVE": "Active",
 		"EMPLOYMENT_TYPE": "Employment Type",
 		"ARCHIVED": "Archived",
