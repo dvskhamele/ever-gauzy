@@ -151,6 +151,9 @@ apps/server-api/src/assets/icons/menu
 dist/
 build/
 tmp/
+<<<<<<< HEAD
 
 # Local Netlify folder
 .netlify
+=======
+>>>>>>> bk_ever-gauzy_20251029_193913_MOD____4_MOD_
