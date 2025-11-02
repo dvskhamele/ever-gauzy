@@ -17,7 +17,7 @@ import {
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { TranslateModule } from '@ngx-translate/core';
-import { DangerZoneMutationModule, SharedModule, ComponentsModule } from '@gauzy/ui-core/shared';
+import { DangerZoneMutationModule, SharedModule, ComponentsModule, TagsColorInputModule } from '@gauzy/ui-core/shared';
 import { SettingsRoutingModule } from './settings-routing.module';
 import { SettingsComponent } from './settings.component';
 import { DangerZoneComponent } from './danger-zone/danger-zone.component';
