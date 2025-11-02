@@ -51,7 +51,8 @@ import { FinanceTemplatesModule } from '../finance-templates/accounting-template
 		DangerZoneMutationModule,
 		ComponentsModule,
 		TagsColorInputModule,
-		GauzyButtonActionModule
+		GauzyButtonActionModule,
+		WindowLayoutModule
 	],
 	declarations: [
 		SettingsComponent,
