@@ -152,8 +152,11 @@ dist/
 build/
 tmp/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Local Netlify folder
 .netlify
 =======
 >>>>>>> bk_ever-gauzy_20251029_193913_MOD____4_MOD_
+=======
+>>>>>>> bk_ever-gauzy_20251029_213843_STG____2
