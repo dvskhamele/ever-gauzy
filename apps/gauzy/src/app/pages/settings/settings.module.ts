@@ -36,6 +36,7 @@ import { FinanceTemplatesModule } from '../finance-templates/accounting-template
 		NbIconModule,
 		NbInputModule,
 		NbListModule,
+		NbRouteTabsetModule,
 		NbSelectModule,
 		NbSpinnerModule,
 		NbTabsetModule,
