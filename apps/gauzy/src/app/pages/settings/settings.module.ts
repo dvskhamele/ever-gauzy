@@ -7,6 +7,7 @@ import {
 	NbIconModule,
 	NbInputModule,
 	NbListModule,
+	NbRouteTabsetModule,
 	NbSelectModule,
 	NbSpinnerModule,
 	NbTabsetModule,
