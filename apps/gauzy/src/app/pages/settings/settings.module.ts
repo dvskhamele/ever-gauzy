@@ -49,7 +49,8 @@ import { FinanceTemplatesModule } from '../finance-templates/accounting-template
 		EmailTemplatesModule,
 		FinanceTemplatesModule,
 		DangerZoneMutationModule,
-		ComponentsModule
+		ComponentsModule,
+		TagsColorInputModule
 	],
 	declarations: [
 		SettingsComponent,
