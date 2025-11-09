@@ -44,7 +44,7 @@ import { FinanceTemplatesModule } from '../finance-templates/accounting-template
 		NbTooltipModule,
 		NgSelectModule,
 		NgxPermissionsModule.forChild(),
-		TranslateModule.forChild(),
+		TranslateModule, // Import shared TranslateModule instead of forChild (already configured in app module)
 		SettingsRoutingModule,
 		SharedModule,
 		EmailTemplatesModule,
