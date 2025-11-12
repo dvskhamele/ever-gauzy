@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  minio:
+    ports:
+      - "9001:9000"      # Changed from 9000 to 9001
+      - "9002:9001"      # Changed from 9001 to 9002 for console
+  
+  db:
+    ports:
+      - "5433:5432"      # Changed from 5432 to 5433
+  
+  api:
+    ports:
+      - "3001:3000"      # Changed from 3000 to 3001
+  
+  webapp:
+    ports:
+      - "4201:4200"      # Changed from 4200 to 4201
+      
+  opensearch:
+    environment:
+      - http.port=9201   # Changed from 9200 to 9201
+    ports:
+      - "9201:9201"      # Changed from 9200 to 9201
+      - "9301:9300"      # Changed from 9300 to 9301  
+      - "9601:9600"      # Changed from 9600 to 9601
+  
+  opensearch-dashboards:
+    environment:
+      - OPENSEARCH_HOSTS=["http://opensearch:9201"]  # Update to new port
+    ports:
+      - "5602:5601"      # Changed from 5601 to 5602
+  
+  dejavu:
+    ports:
+      - "1359:1358"      # Changed from 1358 to 1359
+  
+  zipkin:
+    ports:
+      - "9412:9411"      # Changed from 9411 to 9412
+  
+  pgweb:
+    ports:
+      - "8082:8081"      # Changed from 8081 to 8082
+      
+  cube:
+    ports:
+      - "4001:4000"      # Changed from 4000 to 4001
+      - "5431:5430"      # Changed from 5430 to 5431
+      
+  jitsu:
+    ports:
+      - "8001:8000"      # Changed from 8000 to 8001
